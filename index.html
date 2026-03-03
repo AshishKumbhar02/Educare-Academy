@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educare Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Educare Academy Logo">
+            <div class="logo-text">
+                <h2>Educare Academy</h2>
+                <span>Be Educated, Become Successful</span>
+            </div>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#courses">COURSES</a></li>
+                <li><a href="#program">PROGRAM</a></li>
+                <li><a href="#faq">FAQ'S</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="call-btn">
+            <i class="fa-solid fa-phone"> </i>
+            +91 7045529450
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Score 90%+ in Board Exams with Expert Guidance</h1>
+            <p>
+                Join Educare Academy and get structured learning, regular test series,
+                personal doubt-solving sessions and complete syllabus coverage
+                for CBSE & ICSE students.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn-red">
+                    <i class="fa-solid fa-graduation-cap"></i> Book Free Demo
+                </button>
+
+                <button class="btn-black">
+                    <i class="fa-solid fa-calendar-check"></i> Enroll Now
+                </button>
+            </div>
+        </div>
+
+        <div class="form-box">
+            <h3 class="form-title">
+                <i class="fa-solid fa-bullhorn"></i>
+                Admission Open 2026
+            </h3>
+
+            <p class="form-subtitle">
+                <i class="fa-solid fa-clock"></i>
+                Limited Seats Available – Apply Now
+            </p>
+
+            <!-- Name -->
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Full Name" required minlength="3">
+            </div>
+
+            <!-- MOBILE + SEND OTP SIDE BY SIDE -->
+            <div class="mobile-row">
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="mobile" placeholder="Mobile Number" maxlength="10">
+                </div>
+
+                <button type="button" id="sendOtpBtn" onclick="sendOTP()" style="display:none;">
+                    Send OTP
+                </button>
+            </div>
+
+            <!-- OTP ROW -->
+            <div class="otp-row" id="otpSection" style="display:none;">
+                <input type="text" id="otp" placeholder="Enter OTP">
+                <button type="button" class="verify-btn" onclick="confirmOTP()">
+                    Verify
+                </button>
+            </div>
+
+            <div id="recaptcha-container"></div>
+            <p id="successMsg"></p>
+
+            <!-- Email -->
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <!-- Class -->
+            <div class="input-group">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <select required>
+                    <option value="">Select Class</option>
+                    <option>10th - CBSE</option>
+                    <option>10th - ICSE</option>
+                    <option>12th - Science</option>
+                    <option>12th - Commerce</option>
+                </select>
+            </div>
+
+            <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+                Enquire Now
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p style="text-align:center;">
+            Educare Academy provides quality coaching for 10th and 12th board students.
+            Our expert teachers ensure complete syllabus coverage with regular test series.
+        </p>
+    </section>
+
+
+
+
+    <!-- COURSES SECTION -->
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <p style="text-align:center;">
+            ✔ 10th CBSE <br>
+            ✔ 10th ICSE <br>
+            ✔ 12th Science <br>
+            ✔ 12th Commerce
+        </p>
+    </section>
+
+
+
+    <!-- PROGRAM SECTION -->
+    <section id="program">
+        <h2>Our Program</h2>
+        <p style="text-align:center;">
+            Weekly Tests | Doubt Solving Sessions | Personal Mentorship |
+            Complete Board Preparation Strategy
+        </p>
+    </section>
+
+
+
+    <!-- FAQ SECTION -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p style="text-align:center;">
+            Q: Do you provide demo classes? <br>
+            A: Yes, free demo classes are available.
+        </p>
+    </section>
+
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p style="text-align:center;">
+            📍 Nalaksoopara West <br>
+            📞 +91 7045529450 <br>
+            ✉ educareacademy@gmail.com
+        </p>
+    </section>
+
+
+    <section class="admission-footer">
+
+        <!-- LEFT SIDE FORM -->
+        <!-- <div class="admission-left">
+            <h2>GET UPSC | MPSC ADMISSION</h2>
+            <p>(Submit your Details Below)</p>
+
+            <div class="form-row">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Mobile No.">
+            </div>
+
+            <input type="email" placeholder="Email Id">
+
+            <div class="course-select">
+                <label>Select Course:</label>
+                <input type="radio" name="course"> UPSC
+                <input type="radio" name="course"> MPSC
+                <input type="radio" name="course"> NDA
+                <input type="radio" name="course"> CDS
+                <input type="radio" name="course"> CAPF
+            </div>
+
+            <textarea placeholder="Message"></textarea>
+
+            <button>GET FREE COUNSELLING</button>
+        </div> -->
+
+
+        <!-- RIGHT SIDE CONTACT -->
+        <!-- <div class="admission-right">
+            <h3>Educare Academy</h3>
+
+            <p><strong>Dadar Branch:</strong><br>
+                28, 2nd floor, Mukund Mansion, Opp. Nakshatra Mall,
+                Ranade Road, Dadar (West), Mumbai – 400028.</p>
+
+            <p><strong>Borivali Branch:</strong><br>
+                Shop No. 3, Ground Floor, KK Charitable Trust Building,
+                SV Road, Near Railway Station, Borivali (West),
+                Mumbai – 400092.</p>
+
+            <p>📞 +91 7710095924</p>
+            <p>✉ ekagraaacademy@gmail.com</p>
+
+            <div class="social-icons">
+                <span>🔴</span>
+                <span>🔵</span>
+                <span>🟢</span>
+                <span>🟣</span>
+            </div>
+
+            <div class="qr-box">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=EkagraaAcademy" alt="QR Code">
+                <p>BARCODE TO DOWNLOAD APPS</p>
+            </div>
+        </div> -->
+
+    </section>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        © 2026 by Educare Academy | All rights Reserved.
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+    <!-- Firebase App -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAVDYjMgATNWOFaeFl5DnYVbuj2Rani5gs",
+            authDomain: "educare-academy-eb8a5.firebaseapp.com",
+            projectId: "educare-academy-eb8a5",
+            storageBucket: "educare-academy-eb8a5.firebasestorage.app",
+            messagingSenderId: "273986225382",
+            appId: "1:273986225382:web:d2f0ce9c26ec510ffbe727",
+            measurementId: "G-MY9TRQ1737"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        window.onload = function () {
+            window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+                'recaptcha-container',
+                {
+                    size: 'normal'
+                }
+            );
+        };
+
+        // SEND OTP
+        function sendOTP() {
+            const mobile = document.getElementById("mobile").value;
+            if (mobile.length != 10) {
+                alert("Enter valid 10 digit mobile number");
+                return;
+            }
+
+            const number = "+91" + mobile;
+
+            firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier)
+                .then(function (confirmationResult) {
+
+                    window.confirmationResult = confirmationResult;
+
+                    document.getElementById("otpSection").style.display = "flex";
+
+                    alert("OTP Sent Successfully ✅");
+
+                }).catch(function (error) {
+                    alert(error.message);
+                });
+        }
+
+
+        // VERIFY OTP
+        function confirmOTP() {
+            const code = document.getElementById("otp").value;
+
+            if (!window.confirmationResult) {
+                alert("Please request OTP first");
+                return;
+            }
+
+            window.confirmationResult.confirm(code)
+                .then(function () {
+                    document.getElementById("successMsg").innerHTML =
+                        "Mobile Verified Successfully 🎉";
+
+                }).catch(function () {
+                    alert("Invalid OTP ❌");
+                });
+        }
+
+        // SHOW SEND OTP ONLY AFTER 10 DIGITS
+        const mobileInput = document.getElementById("mobile");
+        const sendOtpBtn = document.getElementById("sendOtpBtn");
+
+        mobileInput.addEventListener("input", function () {
+
+            this.value = this.value.replace(/[^0-9]/g, '');
+
+            if (this.value.length === 10) {
+                sendOtpBtn.style.display = "block";
+            } else {
+                sendOtpBtn.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
