@@ -44,7 +44,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero" id="home">
+    <!-- <section class="hero" id="home">
         <div class="overlay"></div>
 
         <div class="hero-content">
@@ -77,13 +77,11 @@
                 Limited Seats Available – Apply Now
             </p>
 
-            <!-- Name -->
             <div class="input-group">
                 <i class="fa-solid fa-user"></i>
                 <input type="text" placeholder="Full Name" required minlength="3">
             </div>
 
-            <!-- MOBILE + SEND OTP SIDE BY SIDE -->
             <div class="mobile-row">
                 <div class="input-group">
                     <i class="fa-solid fa-phone"></i>
@@ -95,7 +93,6 @@
                 </button>
             </div>
 
-            <!-- OTP ROW -->
             <div class="otp-row" id="otpSection" style="display:none;">
                 <input type="text" id="otp" placeholder="Enter OTP">
                 <button type="button" class="verify-btn" onclick="confirmOTP()">
@@ -106,13 +103,11 @@
             <div id="recaptcha-container"></div>
             <p id="successMsg"></p>
 
-            <!-- Email -->
             <div class="input-group">
                 <i class="fa-solid fa-envelope"></i>
                 <input type="email" placeholder="Email Address" required>
             </div>
 
-            <!-- Class -->
             <div class="input-group">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <select required>
@@ -129,13 +124,152 @@
                 Enquire Now
             </button>
         </div>
+    </section> -->
+    <section class="hero" id="home">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-star"></i> Trusted Coaching Institute
+            </span>
+
+            <h1>
+                Score <span>90%+</span> in Board Exams with Expert Guidance
+            </h1>
+
+            <p>
+                Join <b>Educare Academy</b> and get structured learning,
+                weekly test series, doubt solving sessions and complete
+                syllabus coverage for students from <b>Class 7 to 12</b>.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn-red">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Book Free Demo
+                </button>
+
+                <button class="btn-black">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Enroll Now
+                </button>
+
+            </div>
+
+
+            <!-- TRUST FEATURES -->
+
+            <div class="hero-features">
+
+                <div class="feature">
+                    <i class="fa-solid fa-users"></i>
+                    5000+ Students
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-star"></i>
+                    4.9 Rating
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-trophy"></i>
+                    Top Results
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-book-open"></i>
+                    Classes 7th – 12th
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="form-box">
+
+            <h3 class="form-title">
+                <i class="fa-solid fa-bullhorn"></i>
+                Admission Open 2026
+            </h3>
+
+            <p class="form-subtitle">
+                <i class="fa-solid fa-clock"></i>
+                Limited Seats Available – Apply Now
+            </p>
+
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Full Name" required minlength="3">
+            </div>
+
+            <div class="mobile-row">
+
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="mobile" placeholder="Mobile Number" maxlength="10">
+                </div>
+
+                <button type="button" id="sendOtpBtn" onclick="sendOTP()" style="display:none;">
+                    Send OTP
+                </button>
+
+            </div>
+
+            <div class="otp-row" id="otpSection" style="display:none;">
+                <input type="text" id="otp" placeholder="Enter OTP">
+
+                <button type="button" class="verify-btn" onclick="confirmOTP()">
+                    Verify
+                </button>
+            </div>
+
+            <div id="recaptcha-container"></div>
+            <p id="successMsg"></p>
+
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <select required>
+
+                    <option value="">Select Class</option>
+                    <option>7th</option>
+                    <option>8th</option>
+                    <option>9th</option>
+                    <option>10th - CBSE</option>
+                    <option>10th - ICSE</option>
+                    <option>11th Science</option>
+                    <option>11th Commerce</option>
+                    <option>12th Science</option>
+                    <option>12th Commerce</option>
+
+                </select>
+
+            </div>
+
+            <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+                Enquire Now
+            </button>
+
+        </div>
+
     </section>
 
 
 
-
     <!-- ABOUT SECTION -->
-    <section id="about" class="about-section">
+    <!-- <section id="about" class="about-section">
         <div class="container">
             <h2>About Us</h2>
             <p>
@@ -160,9 +294,179 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section id="about" class="about-section">
+
+        <div class="container">
+
+            <h2>About Educare Academy</h2>
+
+            <p class="about-intro">
+                Educare Academy is a trusted coaching institute dedicated to providing
+                high-quality education for students of Class 10th and 12th. Our goal is to
+                build strong concepts, boost confidence, and help students achieve excellent
+                results in board examinations.
+            </p>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        At Educare Academy we believe that every student has the potential to succeed.
+                        Our experienced teachers use modern teaching methods, concept-based learning,
+                        and regular practice sessions to ensure that students fully understand every
+                        topic.
+                    </p>
+
+                    <p>
+                        We focus not only on completing the syllabus but also on improving students'
+                        problem-solving skills, exam strategies, and confidence.
+                    </p>
+
+                </div>
+
+                <div class="about-image">
+                    <img src="images/classroom1.jpg" alt="Educare Academy Classroom">
+                </div>
+
+            </div>
+
+
+            <!-- FEATURES -->
+
+            <div class="features">
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>Expert Teachers</h3>
+                    <p>Experienced teachers with deep subject knowledge and modern teaching methods.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <h3>Complete Syllabus</h3>
+                    <p>Structured syllabus coverage with notes, assignments and revision sessions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>Regular Tests</h3>
+                    <p>Weekly tests and performance analysis to track student progress.</p>
+                </div>
+
+            </div>
+
+
+            <!-- INFO CARDS -->
+
+            <div class="info-cards">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>
+                        Our mission is to provide high-quality education that builds strong academic
+                        foundations and helps students achieve outstanding results.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become one of the most trusted coaching institutes by empowering students
+                        with knowledge, discipline, and confidence.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-school"></i>
+                    <h3>Facilities</h3>
+                    <ul>
+                        <li>Small Batch Size</li>
+                        <li>Modern Classrooms</li>
+                        <li>Study Materials</li>
+                        <li>Doubt Solving Sessions</li>
+                        <li>Weekly Test Series</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Why Choose Us</h3>
+                    <p>
+                        Result-oriented teaching, disciplined learning environment and personal
+                        attention to every student.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- STATS SECTION -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <h3>500+</h3>
+                    <p>Students Taught</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>95%</h3>
+                    <p>Success Rate</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>10+</h3>
+                    <p>Expert Teachers</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>5+</h3>
+                    <p>Years Experience</p>
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
+    <!-- RESULT POSTER SECTION -->
+    <section class="poster-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Our Outstanding Results</h2>
+
+            <p class="poster-text">
+                Our students consistently achieve excellent results in board examinations.
+                Here are some of the highlights of our academic success.
+            </p>
+
+            <div class="poster-card">
+
+                <img src="images/poster.jpg" alt="Educare Academy Result Poster" class="result-poster">
+
+                <div class="poster-overlay">
+                    <a href="images/poster.jpg" download class="download-btn">
+                        Download Poster
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
     <!-- COURSES SECTION -->
