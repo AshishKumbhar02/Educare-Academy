@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educare Academy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -147,12 +152,12 @@
 
             <div class="hero-buttons">
 
-                <button class="btn-red">
+                <button class="btn-red" id="openDemo">
                     <i class="fa-solid fa-graduation-cap"></i>
                     Book Free Demo
                 </button>
 
-                <button class="btn-black">
+                <button class="btn-black" id="openEnroll">
                     <i class="fa-solid fa-calendar-check"></i>
                     Enroll Now
                 </button>
@@ -189,9 +194,53 @@
         </div>
 
 
+
+        <div class="demo-modal" id="demoModal">
+
+            <div class="modal-box">
+
+                <button class="close-btn" id="closeDemo">✕</button>
+
+                <div class="modal-content">
+
+                    <div class="modal-image">
+                        <img src="images/demo.png" alt="Demo">
+                    </div>
+
+                    <div class="modal-form">
+
+                        <h2>Book Your Demo</h2>
+                        <p>Schedule a free demo session and get course brochure</p>
+
+                        <form>
+
+                            <label>Mobile Number</label>
+                            <input type="tel" placeholder="Enter 10-digit Mobile Number" required>
+
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your Name" required>
+
+                            <label>Email</label>
+                            <input type="email" placeholder="yourname@gmail.com" required>
+
+                            <button type="submit" class="submit-btn">
+                                Submit
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
         <!-- FORM -->
 
-        <div class="form-box">
+        <!-- <div class="form-box">
 
             <h3 class="form-title">
                 <i class="fa-solid fa-bullhorn"></i>
@@ -262,8 +311,74 @@
                 Enquire Now
             </button>
 
-        </div>
+        </div> -->
 
+
+        <div class="premium-admission-form">
+
+            <div class="form-top">
+
+                <h3>Admission Open 2026</h3>
+                <p>Limited Seats Available – Apply Now</p>
+
+            </div>
+
+            <form class="form-content">
+
+                <div class="form-grid">
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" placeholder="Mobile Number" maxlength="10" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <select required>
+
+                            <option value="">Select Class</option>
+                            <option>7th</option>
+                            <option>8th</option>
+                            <option>9th</option>
+                            <option>10th - CBSE</option>
+                            <option>10th - ICSE</option>
+                            <option>11th Science</option>
+                            <option>11th Commerce</option>
+                            <option>12th Science</option>
+                            <option>12th Commerce</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-field full">
+
+                        <i class="fa-solid fa-shield"></i>
+                        <input type="number" placeholder="Verify : 1 + 7 = ?" required>
+
+                    </div>
+
+                </div>
+
+                <button class="submit-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Enquire Now
+                </button>
+
+            </form>
+
+        </div>
     </section>
 
 
@@ -1141,7 +1256,37 @@
     <script src="script.js"></script>
 
 
+    <script>
+        // Isse Inspect ka right-click option nahi dikhega.
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
 
+
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+
+
+
+
+        setInterval(function () {
+            if (window.outerWidth - window.innerWidth > 160) {
+                document.body.innerHTML = "";
+            }
+        }, 1000);
+    </script>
 
 
 

@@ -6,6 +6,8 @@ menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
+
+
 const faqItems = document.querySelectorAll(".faq-item");
 faqItems.forEach((item) => {
   const question = item.querySelector(".faq-question");
@@ -48,3 +50,29 @@ backToTop.addEventListener("click", function (e) {
     { once: true },
   );
 });
+
+
+
+
+
+
+
+
+
+const openBtn = document.getElementById("openDemo");
+const modal = document.getElementById("demoModal");
+const closeBtn = document.getElementById("closeDemo");
+
+openBtn.onclick = () => {
+modal.style.display = "flex";
+}
+
+closeBtn.onclick = () => {
+modal.style.display = "none";
+}
+
+window.onclick = (e) => {
+if(e.target == modal){
+modal.style.display = "none";
+}
+}
