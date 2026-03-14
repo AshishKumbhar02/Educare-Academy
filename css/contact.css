@@ -1,0 +1,234 @@
+/* =============================== */
+/* CONTACT SECTION */
+/* =============================== */
+
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8fbff, #eef5ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* =============================== */
+/* CONTACT CARDS */
+/* =============================== */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.contact-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1d3557;
+}
+
+.contact-card p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #1d3557;
+  font-weight: 500;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffe5e5;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* =============================== */
+/* MAP */
+/* =============================== */
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  border: 0;
+}
+
+/* =============================== */
+/* CONTACT FORM */
+/* =============================== */
+
+.contact-form-container {
+  background: linear-gradient(135deg, #ffffff, #f1f7ff);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  max-width: 850px;
+  margin: 60px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top gradient line */
+
+.contact-form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #e63946, #457b9d, #43aa8b);
+}
+
+.contact-form-container h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #1d3557;
+}
+
+/* =============================== */
+/* FORM */
+/* =============================== */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  background: white;
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #457b9d;
+  box-shadow: 0 5px 15px rgba(69, 123, 157, 0.2);
+}
+
+.input-group.full {
+  width: 100%;
+}
+
+/* =============================== */
+/* BUTTON */
+/* =============================== */
+
+.btn {
+  background: linear-gradient(135deg, #457b9d, #1d3557);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.4s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================== */
+/* SOCIAL ICONS */
+/* =============================== */
+
+.contact-social {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-social span {
+  font-weight: 500;
+  margin-right: 10px;
+  color: #333;
+}
+
+.contact-social a {
+  font-size: 22px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.contact-social a:hover {
+  transform: scale(1.3);
+}
