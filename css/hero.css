@@ -152,6 +152,9 @@
   position: relative;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
   animation: modalOpen 0.3s ease;
+
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 /* OPEN ANIMATION */
@@ -198,6 +201,8 @@
 
 .modal-image {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-image img {
@@ -251,7 +256,7 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #0d6efd;
+  border-color: #464545;
   box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
 }
 
@@ -378,19 +383,3 @@
   background: #ff2020;
   transform: translateY(-2px);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

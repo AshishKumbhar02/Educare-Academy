@@ -103,6 +103,22 @@
   .form-grid {
     grid-template-columns: 1fr;
   }
+  .modal-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-image img {
+    max-width: 260px;
+    margin: auto;
+  }
+
+  .modal-box {
+    padding: 30px 20px;
+  }
+  .hero {
+    background-attachment: scroll;
+  }
 }
 
 /* ========================= */
@@ -235,7 +251,6 @@
   }
 }
 
-
 /* =============================== */
 /* RESPONSIVE DESIGN */
 /* =============================== */
@@ -257,8 +272,6 @@
   }
 }
 
-
-
 /* ===================== */
 /* MOBILE RESPONSIVE */
 /* ===================== */
@@ -274,11 +287,12 @@
   }
 
   .modal-content {
-    gap: 18px;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .modal-image img {
-    max-width: 180px;
+    max-width: 200px;
   }
 
   .modal-form h2 {

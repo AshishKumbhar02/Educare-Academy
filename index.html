@@ -88,12 +88,12 @@
             <div class="hero-features">
                 <div class="feature">
                     <i class="fa-solid fa-users"></i>
-                    <span>5000+ Students</span>
+                    <span>100+ Students</span>
                 </div>
 
                 <div class="feature">
                     <i class="fa-solid fa-star"></i>
-                    <span>4.9 Rating</span>
+                    <span>3.9 Rating</span>
                 </div>
 
                 <div class="feature">
@@ -124,24 +124,36 @@
                         <p>Schedule a free demo session and get course brochure</p>
 
                         <form id="demoForm">
+
                             <div class="form-group">
-                                <label for="demoMobile">Mobile Number</label>
-                                <input type="tel" id="demoMobile" placeholder="Enter 10-digit Mobile Number"
-                                    pattern="[0-9]{10}" required>
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Enter Full Name" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="demoName">Full Name</label>
-                                <input type="text" id="demoName" placeholder="Your Name" required>
+                                <label for="mobile">Mobile Number</label>
+                                <input type="tel" id="mobile" placeholder="Enter 10-digit Mobile Number" maxlength="10"
+                                    required>
                             </div>
+                            <div id="recaptcha-container"></div>
+
+                            <div class="form-group" id="otpBox" style="display:none;">
+                                <label>Enter OTP</label>
+                                <input type="text" id="otp" placeholder="Enter OTP">
+                                <button type="button" id="verifyOtpBtn">Verify OTP</button>
+                            </div>
+                            <button type="button" id="sendOtpBtn" class="submit-btn">Send OTP</button>
 
                             <div class="form-group">
-                                <label for="demoEmail">Email</label>
-                                <input type="email" id="demoEmail" placeholder="yourname@gmail.com" required>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="yourname@gmail.com" required>
                             </div>
 
                             <button type="submit" class="submit-btn">Submit</button>
+
                         </form>
+
+                        <div id="recaptcha-container"></div>
                     </div>
                 </div>
             </div>
@@ -1055,8 +1067,86 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/disable.js"></script>
+    <!-- <script src="js/disable.js"></script> -->
     <script src="js/rocket.js"></script>
+
+    <!-- Firebase Script Add -->
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+        import { getAuth, RecaptchaVerifier, signInWithPhoneNumber }
+            from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAVDYjMgATNWOFaeFl5DnYVbuj2Rani5gs",
+            authDomain: "educare-academy-eb8a5.firebaseapp.com",
+            projectId: "educare-academy-eb8a5",
+            storageBucket: "educare-academy-eb8a5.firebasestorage.app",
+            messagingSenderId: "273986225382",
+            appId: "1:273986225382:web:d2f0ce9c26ec510ffbe727",
+            measurementId: "G-MY9TRQ1737"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        let confirmationResult;
+
+        window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+            size: 'normal',
+            callback: (response) => {
+                console.log("Recaptcha verified");
+            }
+        });
+
+        document.getElementById("sendOtpBtn").addEventListener("click", function () {
+
+            let mobile = document.getElementById("mobile").value;
+
+            if (mobile.length !== 10) {
+                alert("Enter valid mobile number");
+                return;
+            }
+
+            let phoneNumber = "+91" + mobile;
+
+            signInWithPhoneNumber(auth, phoneNumber, window.recaptchaVerifier)
+                .then((result) => {
+
+                    confirmationResult = result;
+
+                    alert("OTP Sent Successfully");
+
+                    document.getElementById("otpBox").style.display = "block";
+
+                })
+                .catch((error) => {
+
+                    alert(error.message);
+
+                });
+
+        });
+
+        document.getElementById("verifyOtpBtn").addEventListener("click", function () {
+
+            let otp = document.getElementById("otp").value;
+
+            confirmationResult.confirm(otp)
+                .then((result) => {
+
+                    alert("Mobile Number Verified");
+
+                })
+                .catch((error) => {
+
+                    alert("Invalid OTP");
+
+                });
+
+        });
+    </script>
+
 </body>
 
 </html>

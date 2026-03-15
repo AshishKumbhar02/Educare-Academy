@@ -26,6 +26,36 @@ window.onclick = (e) => {
   }
 };
 
+// Form Validation
+document.getElementById("demoForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value.trim();
+  let mobile = document.getElementById("mobile").value.trim();
+  let email = document.getElementById("email").value.trim();
+
+  let namePattern = /^[A-Za-z ]{3,40}$/;
+  let mobilePattern = /^[6-9][0-9]{9}$/;
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!namePattern.test(name)) {
+    alert("Enter valid full name");
+    return;
+  }
+
+  if (!mobilePattern.test(mobile)) {
+    alert("Enter valid mobile number");
+    return;
+  }
+
+  if (!emailPattern.test(email)) {
+    alert("Enter valid email");
+    return;
+  }
+
+  alert("Form submitted successfully");
+});
+
 // FAQ Accordion
 const faqItems = document.querySelectorAll(".faq-item");
 
