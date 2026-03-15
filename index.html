@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educare Academy</title>
-    <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/about.css">
@@ -20,40 +19,6 @@
 </head>
 
 <body>
-
-    <!-- INTRO SCREEN -->
-    <div id="intro">
-        <div id="particles-js"></div>
-
-        <div class="intro-box">
-
-            <img src="images/Ashish.jpeg" class="intro-img" alt="Ashish">
-
-            <h1 class="intro-name">
-                <span id="typing"></span>
-            </h1>
-
-            <p class="intro-text">
-                <i class="fa-solid fa-code"></i>
-                Web Developer | IT Graduate
-            </p>
-
-            <div class="loader"></div>
-
-            <button class="enter-btn" onclick="enterSite()">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                Enter Website
-            </button>
-
-            <span class="skip-btn" onclick="enterSite()">
-                Skip Intro
-            </span>
-
-        </div>
-    </div>
-
-
-
     <!-- HEADER -->
     <header>
         <div class="logo">
@@ -1055,38 +1020,43 @@
         </div>
 
         <div class="footer-bottom">
-            <p>
-                © 2026 Educare Academy &nbsp;|&nbsp; Designed with
-                <span class="footer-heart" style="color:#e63946;">&#10084;</span>
-                &nbsp;|&nbsp; All Rights Reserved
-            </p>
-            <!-- Rocket Back to Top Button -->
-            <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to Top">
-                <img src="images/rocket.png" alt="Back to Top" class="rocket-img">
+            <div class="footer-credit">
+                <p>
+                    © 2026 Educare Academy
+                </p>
+                <p class="developer-text">
+                    Designed & Developed by
+                    <a href="https://your-portfolio-link.com" target="_blank" class="dev-name">
+                        Ashish Kumbhar
+                    </a>
+                </p>
+                <div class="developer-links">
+                    <a href="https://your-portfolio-link.com" target="_blank" title="Portfolio">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Rocket Button -->
+            <a href="#home" class="back-to-top" id="backToTop">
+                <span class="rocket-wrapper">
+                    <img src="images/rocket.png" class="rocket-img">
+                    <span class="rocket-fire"></span>
+                    <span class="rocket-smoke"></span>
+                </span>
             </a>
+
         </div>
     </footer>
 
-
-
-
-
     <script src="js/script.js"></script>
     <script src="js/disable.js"></script>
-    <script src="js/intro.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 100 },
-                size: { value: 3 },
-                move: { speed: 1 },
-                line_linked: { enable: true },
-                color: { value: "#ffffff" }
-            }
-        });
-    </script>
-
+    <script src="js/rocket.js"></script>
 </body>
 
 </html>
