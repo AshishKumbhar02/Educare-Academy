@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educare Academy</title>
+    <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/about.css">
@@ -19,6 +20,39 @@
 </head>
 
 <body>
+
+    <!-- INTRO SCREEN -->
+    <div id="intro">
+        <div id="particles-js"></div>
+
+        <div class="intro-box">
+
+            <img src="images/Ashish.jpeg" class="intro-img" alt="Ashish">
+
+            <h1 class="intro-name">
+                <span id="typing"></span>
+            </h1>
+
+            <p class="intro-text">
+                <i class="fa-solid fa-code"></i>
+                Web Developer | IT Graduate
+            </p>
+
+            <div class="loader"></div>
+
+            <button class="enter-btn" onclick="enterSite()">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                Enter Website
+            </button>
+
+            <span class="skip-btn" onclick="enterSite()">
+                Skip Intro
+            </span>
+
+        </div>
+    </div>
+
+
 
     <!-- HEADER -->
     <header>
@@ -1039,6 +1073,20 @@
 
     <script src="js/script.js"></script>
     <script src="js/disable.js"></script>
+    <script src="js/intro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                size: { value: 3 },
+                move: { speed: 1 },
+                line_linked: { enable: true },
+                color: { value: "#ffffff" }
+            }
+        });
+    </script>
+
 </body>
 
 </html>
