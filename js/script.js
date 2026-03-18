@@ -71,3 +71,20 @@ faqItems.forEach((item) => {
     item.classList.toggle("active");
   });
 });
+
+// OTP Section
+const emailInput = document.getElementById("email");
+const sendOtpBtn = document.getElementById("sendOtpBtn");
+const otpBox = document.getElementById("otpBox");
+const otpActions = document.getElementById("otpActions"); // 👈 NEW
+
+// Enable button only if email valid
+emailInput.addEventListener("input", () => {
+  sendOtpBtn.disabled = !emailInput.checkValidity();
+});
+
+// Show OTP box after click
+sendOtpBtn.addEventListener("click", () => {
+  otpBox.style.display = "block";
+  otpActions.style.display = "flex"; // 👈 NEW
+});

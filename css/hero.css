@@ -364,22 +364,153 @@
   grid-column: 1/-1;
 }
 
-/* button */
 
-.submit-btn {
+label i {
+  margin-right: 6px;
+  color: #ff6b00;
+}
+
+.submit-btn i {
+  margin-right: 6px;
+}
+
+.modal-form h2 i {
+  color: #ff6b00;
+  margin-right: 8px;
+}
+
+.email-box {
+  position: relative;
+}
+
+.email-box input {
   width: 100%;
-  padding: 14px;
+  padding-right: 120px;
+}
+
+.email-box button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 38px;
+  padding: 0 12px;
   border: none;
-  border-radius: 8px;
   background: #ff3c3c;
   color: white;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 13px;
+}
+
+.email-box button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* OTP buttons */
+.otp-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.otp-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+
+
+/* INPUT FIELD */
+.input-field {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-field i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* INPUT */
+.input-field input,
+.input-field select {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px 0 45px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  font-size: 14px;
+  background: #f9f9f9;
   transition: 0.3s;
 }
 
-.submit-btn:hover {
-  background: #ff2020;
-  transform: translateY(-2px);
+.input-field input:focus,
+.input-field select:focus {
+  border-color: #ff3c3c;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 60, 60, 0.2);
+}
+
+/* EMAIL BUTTON INSIDE */
+.email-field input {
+  padding-right: 110px;
+}
+
+.email-field button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 35px;
+  padding: 0 12px;
+  border: none;
+  background: #ff3c3c;
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.email-field button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* OTP BUTTONS */
+.otp-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.otp-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* SUBMIT */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
 }
