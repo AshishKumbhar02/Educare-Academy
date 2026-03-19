@@ -190,59 +190,80 @@
 
         <!-- ADMISSION FORM -->
         <div class="premium-admission-form">
-            <div class="form-top">
-                <h3>Admission Open 2026</h3>
-                <p>Limited Seats Available – Apply Now</p>
+
+            <!-- 🌸 FESTIVAL IMAGE -->
+            <div class="festival-banner">
+                <img src="images/gudhi-padwa.jpeg" alt="Gudhi Padwa" id="festivalImg">
+                <div class="festival-text">
+                    🌸 Gudhi Padwa Special Offer 🎉
+                </div>
             </div>
 
+            <div id="imagePopup" class="image-popup">
+                <span class="close-popup">&times;</span>
+                <img class="popup-content" id="popupImg">
+            </div>
+
+            <!-- HEADER -->
+            <div class="form-top">
+                <h3>🎯 Free Demo + Admission 2026</h3>
+                <p>Scholarship Test Available</p>
+            </div>
+
+            <!-- URGENCY -->
+            <p class="urgency">⏳ Only 20 Seats Left!</p>
+
+            <!-- TRUST -->
+            <div class="trust-box">
+                <span>✅ 500+ Students</span>
+                <span>⭐ 4.8 Rating</span>
+                <span>🏆 10+ Years</span>
+            </div>
+
+            <!-- FORM -->
             <form class="form-content" id="admissionForm">
+
                 <div class="form-grid">
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <input type="text" placeholder="Full Name" required>
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-phone"></i>
-                        <input type="tel" id="mobileNumber" placeholder="Mobile Number" pattern="[0-9]{10}"
-                            maxlength="10" required>
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" id="emailAddress" placeholder="Email Address" required>
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <select id="classSelect" required>
-                            <option value="">Select Class</option>
-                            <option value="7">7th</option>
-                            <option value="8">8th</option>
-                            <option value="9">9th</option>
-                            <option value="10-cbse">10th - CBSE</option>
-                            <option value="10-icse">10th - ICSE</option>
-                            <option value="11-science">11th Science</option>
-                            <option value="11-commerce">11th Commerce</option>
-                            <option value="12-science">12th Science</option>
-                            <option value="12-commerce">12th Commerce</option>
-                        </select>
+                        <input type="tel" placeholder="Mobile Number" maxlength="10" required>
                     </div>
 
                     <div class="input-field full">
-                        <i class="fa-solid fa-shield"></i>
-                        <input type="number" id="verification" placeholder="Verify : 1 + 7 = ?" min="8" max="8"
-                            required>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <select required>
+                            <option value="">Select Class</option>
+                            <option>7th</option>
+                            <option>8th</option>
+                            <option>9th</option>
+                            <option>10th</option>
+                            <option>11th Science</option>
+                            <option>11th Commerce</option>
+                            <option>12th Science</option>
+                            <option>12th Commerce</option>
+                        </select>
                     </div>
 
                 </div>
 
+                <!-- CTA BUTTON -->
                 <button type="submit" class="submit-btn">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    Enquire Now
+                    🚀 Book Free Demo
                 </button>
+
             </form>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/917045529450" class="whatsapp-btn">
+                💬 Chat on WhatsApp
+            </a>
+
         </div>
     </section>
 
