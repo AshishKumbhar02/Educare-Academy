@@ -3,15 +3,18 @@
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/hero-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    url("../images/hero-bg.jpg") no-repeat center center;
+
+  background-size: cover; /* Image full screen cover kare */
+  background-repeat: no-repeat;
+
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
   color: white;
   padding: 60px 20px;
@@ -666,4 +669,44 @@ label i {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* MOBILE FIELD BUTTON */
+.mobile-field {
+  position: relative;
+}
+
+.mobile-field input {
+  padding-right: 110px;
+}
+
+.otp-btn {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  height: 32px;
+  padding: 0 12px;
+  background: #ff3c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.masked-text {
+  display: none;
+  font-size: 13px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px;
+  border-radius: 6px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* OTP BUTTON */
+.otp-actions button {
+  background: #222;
 }

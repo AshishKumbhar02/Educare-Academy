@@ -176,7 +176,6 @@
                             <!-- SUBMIT -->
                             <button type="submit" id="submitBtn" class="submit-btn" disabled>Submit</button>
                         </form>
-                        <div id="recaptcha-container"></div>
                     </div>
                 </div>
             </div>
@@ -187,9 +186,9 @@
 
             <!-- 🌸 FESTIVAL IMAGE -->
             <div class="festival-banner">
-                <img src="images/gudhi-padwa.jpeg" alt="Gudhi Padwa" id="festivalImg">
+                <img src="images/Summer.png" alt="Summer Offer" id="festivalImg">
                 <div class="festival-text">
-                    🌸 Gudhi Padwa Special Offer 🎉
+                    🌞 Summer Bonanza Offer 🎉
                 </div>
             </div>
 
@@ -216,22 +215,40 @@
 
             <!-- FORM -->
             <form class="form-content" id="admissionForm">
-
                 <div class="form-grid">
-
+                    <!-- NAME -->
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Full Name" required>
+                        <input type="text" id="name" placeholder="Full Name" required>
                     </div>
 
-                    <div class="input-field">
+                    <!-- MOBILE -->
+                    <div class="input-field mobile-field">
                         <i class="fa-solid fa-phone"></i>
-                        <input type="tel" placeholder="Mobile Number" maxlength="10" required>
+                        <input type="tel" id="phone" placeholder="Mobile Number" maxlength="10" required>
+                        <button type="button" id="otpBtn" class="otp-btn" onclick="sendOTP()" style="display:none;">
+                            Send OTP
+                        </button>
                     </div>
 
+                    <!-- MASKED NUMBER -->
+                    <p id="showNumber" class="masked-text"></p>
+
+                    <!-- OTP FIELD (HIDDEN FIRST) -->
+                    <div class="input-field full" id="otpSection" style="display:none;">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="text" id="otp" placeholder="Enter OTP">
+                    </div>
+
+                    <!-- VERIFY BUTTON (HIDDEN FIRST) -->
+                    <div class="otp-actions full" id="verifySection" style="display:none;">
+                        <button type="button" onclick="verifyOTP()">Verify OTP</button>
+                    </div>
+
+                    <!-- CLASS -->
                     <div class="input-field full">
                         <i class="fa-solid fa-graduation-cap"></i>
-                        <select required>
+                        <select id="class" required>
                             <option value="">Select Class</option>
                             <option>7th</option>
                             <option>8th</option>
@@ -245,12 +262,10 @@
                     </div>
 
                 </div>
-
-                <!-- CTA BUTTON -->
-                <button type="submit" class="submit-btn">
+                <!-- SUBMIT -->
+                <button type="submit" class="submit-btn" id="submitBtn" disabled>
                     🚀 Book Free Demo
                 </button>
-
             </form>
 
             <!-- WHATSAPP -->
@@ -303,7 +318,7 @@
                 </div>
 
                 <div class="about-image">
-                    <img src="images/classroom1.jpg" alt="Educare Academy Classroom">
+                    <img src="images/Class.png" alt="Educare Academy Classroom">
                 </div>
             </div>
 
@@ -564,7 +579,7 @@
             <div class="faculty-container">
                 <!-- Teacher 1 -->
                 <div class="faculty-card">
-                    <img src="images/ganesh.png" alt="Rahul Sharma - Mathematics Teacher">
+                    <img src="images/Ashish.jpeg" alt="Rahul Sharma - Mathematics Teacher">
                     <h3>Rahul Sharma</h3>
                     <span class="subject">Mathematics Faculty</span>
                     <p class="info">
@@ -576,15 +591,15 @@
                         <li><i class="fa-solid fa-check"></i> Olympiad Mentor</li>
                         <li><i class="fa-solid fa-check"></i> Result-oriented Approach</li>
                     </ul>
-                    <div class="faculty-social">
+                    <!-- <div class="faculty-social">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Teacher 2 -->
                 <div class="faculty-card">
-                    <img src="images/ganesh.png" alt="Priya Mehta - Science Teacher">
+                    <img src="images/Ashish.jpeg" alt="Priya Mehta - Science Teacher">
                     <h3>Priya Mehta</h3>
                     <span class="subject">Science Faculty</span>
                     <p class="info">
@@ -596,15 +611,15 @@
                         <li><i class="fa-solid fa-check"></i> Concept-based Teaching</li>
                         <li><i class="fa-solid fa-check"></i> Doubt Solving Expert</li>
                     </ul>
-                    <div class="faculty-social">
+                    <!-- <div class="faculty-social">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Teacher 3 -->
                 <div class="faculty-card">
-                    <img src="images/ganesh.png" alt="Anita Desai - English Teacher">
+                    <img src="images/Ashish.jpeg" alt="Anita Desai - English Teacher">
                     <h3>Anita Desai</h3>
                     <span class="subject">English Faculty</span>
                     <p class="info">
@@ -616,11 +631,11 @@
                         <li><i class="fa-solid fa-check"></i> Board Exam Specialist</li>
                         <li><i class="fa-solid fa-check"></i> Communication Skills Coach</li>
                     </ul>
-                    <div class="faculty-social">
+                    <!-- <div class="faculty-social">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Add more faculty cards as needed -->
             </div>
@@ -1113,83 +1128,6 @@
     <script src="js/script.js"></script>
     <!-- <script src="js/disable.js"></script> -->
     <script src="js/rocket.js"></script>
-
-    <!-- Firebase Script Add -->
-    <!-- <script type="module">
-
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-        import { getAuth, RecaptchaVerifier, signInWithPhoneNumber }
-            from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyAVDYjMgATNWOFaeFl5DnYVbuj2Rani5gs",
-            authDomain: "educare-academy-eb8a5.firebaseapp.com",
-            projectId: "educare-academy-eb8a5",
-            storageBucket: "educare-academy-eb8a5.firebasestorage.app",
-            messagingSenderId: "273986225382",
-            appId: "1:273986225382:web:d2f0ce9c26ec510ffbe727",
-            measurementId: "G-MY9TRQ1737"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-
-        let confirmationResult;
-
-        window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
-            size: 'normal',
-            callback: (response) => {
-                console.log("Recaptcha verified");
-            }
-        });
-
-        document.getElementById("sendOtpBtn").addEventListener("click", function () {
-
-            let mobile = document.getElementById("mobile").value;
-
-            if (mobile.length !== 10) {
-                alert("Enter valid mobile number");
-                return;
-            }
-
-            let phoneNumber = "+91" + mobile;
-
-            signInWithPhoneNumber(auth, phoneNumber, window.recaptchaVerifier)
-                .then((result) => {
-
-                    confirmationResult = result;
-
-                    alert("OTP Sent Successfully");
-
-                    document.getElementById("otpBox").style.display = "block";
-
-                })
-                .catch((error) => {
-
-                    alert(error.message);
-
-                });
-
-        });
-
-        document.getElementById("verifyOtpBtn").addEventListener("click", function () {
-
-            let otp = document.getElementById("otp").value;
-
-            confirmationResult.confirm(otp)
-                .then((result) => {
-
-                    alert("Mobile Number Verified");
-
-                })
-                .catch((error) => {
-
-                    alert("Invalid OTP");
-
-                });
-
-        });
-    </script> -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>

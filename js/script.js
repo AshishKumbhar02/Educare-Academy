@@ -111,3 +111,16 @@ popup.addEventListener("click", (e) => {
     popup.style.display = "none";
   }
 });
+
+// PHONE NUMBER VALIDATION & SHOW OTP BUTTON
+document.getElementById("phone").addEventListener("input", function () {
+  let phone = this.value;
+  let otpBtn = document.getElementById("otpBtn");
+
+  // ✅ ONLY 10 DIGIT SHOW
+  if (phone.length === 10 && /^[0-9]+$/.test(phone)) {
+    otpBtn.style.display = "block";
+  } else {
+    otpBtn.style.display = "none";
+  }
+});
