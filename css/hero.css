@@ -3,7 +3,7 @@
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/hero-bg.jpg") no-repeat center center;
+    url("../images/classroom.png") no-repeat center center;
 
   background-size: cover; /* Image full screen cover kare */
   background-repeat: no-repeat;
@@ -22,11 +22,8 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -631,31 +628,41 @@ label i {
   display: none;
   position: fixed;
   z-index: 9999;
-  padding: 20px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(0, 0, 0, 0.1); 
+  padding: 15px;
+  border-radius: 10px;
+
+  width: auto;
+  height: auto;
+
   justify-content: center;
   align-items: center;
-}
 
+  backdrop-filter: blur(10px);
+}
 /* IMAGE */
 .popup-content {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 80vh;
   border-radius: 10px;
-  animation: zoomIn 0.3s ease;
+  display: block;
 }
 
 /* CLOSE BUTTON */
 .close-popup {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  color: #fff;
-  font-size: 30px;
+  top: -10px;
+  right: -10px;
+  background: white;
+  color: black;
+  font-size: 18px;
+  border-radius: 50%;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
