@@ -157,6 +157,15 @@
     grid-template-columns: 1fr;
   }
 
+  .subject-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subject-buttons a {
+    font-size: 11px;
+    padding: 7px;
+  }
+
   .section-header h2 {
     font-size: 26px;
   }
