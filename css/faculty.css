@@ -1,143 +1,202 @@
+/* Section */
 .faculty-section {
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #fdfbfb, #ebedfa);
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedfa);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Title */
 .section-title h2 {
-    font-size: 42px;
-    font-weight: 700;
-    color: #1b1b1b;
-    margin-bottom: 15px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1b1b1b;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .section-title p {
-    max-width: 700px;
-    margin: auto;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 70px;
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 70px;
 }
 
 /* Grid */
 .faculty-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 40px;
 }
 
 /* Card */
 .faculty-card {
-    background: #fff;
-    padding: 35px 20px 25px 20px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    position: relative;
-    transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 35px 20px 25px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
+/* Stagger animation */
+.faculty-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.faculty-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.faculty-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.faculty-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.faculty-card:nth-child(5) {
+  animation-delay: 1s;
+}
+.faculty-card:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.faculty-card:nth-child(7) {
+  animation-delay: 1.4s;
+}
+.faculty-card:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔥 Animated Gradient Border */
 .faculty-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: gr;
-    border-radius: 20px 20px 0 0;
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 25px;
+  background: linear-gradient(270deg, #ff6a00, #00f2fe, #43e97b, #ff6a00);
+  background-size: 400%;
+  z-index: -1;
+  animation: borderMove 6s linear infinite;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
 
 /* Hover Effect */
 .faculty-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+  transform: translateY(-15px) scale(1.04);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
+/* Image */
 .faculty-card img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #fff;
+  transition: all 0.4s ease;
 }
 
 .faculty-card:hover img {
-    transform: scale(1.12);
+  transform: scale(1.15) rotate(3deg);
 }
 
-/* Name & Subject */
+/* Name */
 .faculty-card h3 {
-    font-size: 22px;
-    color: #222;
-    margin-bottom: 8px;
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 8px;
 }
 
+/* Subject Badge */
 .subject {
-    display: inline-block;
-    background: #eef4ff;
-    color: #007bff;
-    font-size: 13px;
-    padding: 6px 15px;
-    border-radius: 25px;
-    margin-bottom: 15px;
-    font-weight: 600;
+  display: inline-block;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 15px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 /* Highlights */
 .faculty-highlights {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .faculty-highlights li {
-    background: linear-gradient(90deg, #4facfe, #00f2fe, #43e97b);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  color: #333;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .faculty-highlights li i {
-    font-size: 16px;
+  color: #007bff;
 }
 
+/* Hover list */
 .faculty-highlights li:hover {
-    transform: translateX(5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateX(8px);
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #fff;
 }
 
 /* Note */
 .faculty-note {
-    margin-top: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: linear-gradient(135deg, #e8f0ff, #f5f9ff);
-    padding: 15px 25px;
-    border-radius: 30px;
-    font-size: 14px;
-    color: #333;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    border: 1px solid #dbe6ff;
+  margin-top: 60px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #e8f0ff, #f5f9ff);
+  padding: 15px 25px;
+  border-radius: 40px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dbe6ff;
+  transition: 0.3s;
+}
+
+.faculty-note:hover {
+  transform: scale(1.05);
 }
 
 .faculty-note i {
-    color: #ffb400;
-    font-size: 18px;
+  color: #ffb400;
+  font-size: 18px;
 }
-
-

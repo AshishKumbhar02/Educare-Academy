@@ -218,31 +218,87 @@
 /* ========================= */
 /* STATS */
 /* ========================= */
-
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
+/* CARD */
 .stat-card {
-  background: #2563eb;
   color: #fff;
-  padding: 30px;
-  border-radius: 12px;
+  padding: 35px 20px;
+  border-radius: 18px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
 }
 
+/* Individual Colors (better look) */
+.stat-card:nth-child(1) {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.stat-card:nth-child(4) {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+/* Glow overlay */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: rgba(255, 255, 255, 0.08);
+  top: -60%;
+  left: -60%;
+  transform: rotate(25deg);
+  transition: 0.5s;
+}
+
+.stat-card:hover::before {
+  top: -30%;
+  left: -30%;
+}
+
+/* Hover effect */
+.stat-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ICON */
 .stat-icon {
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
+/* NUMBER */
 .stat-card h3 {
-  font-size: 28px;
-  margin-bottom: 5px;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
+/* TEXT */
 .stat-card p {
   font-size: 15px;
+  opacity: 0.9;
 }

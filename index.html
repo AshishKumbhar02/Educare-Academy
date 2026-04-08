@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="css/student.css">
     <link rel="stylesheet" href="css/faculty.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/faq.css">
@@ -413,7 +414,7 @@
                     <div class="stat-icon">
                         <i class="fa-solid fa-user-graduate"></i>
                     </div>
-                    <h3>5000+</h3>
+                    <h3 class="counter" data-target="500">0</h3>
                     <p>Students Taught</p>
                 </div>
 
@@ -421,7 +422,7 @@
                     <div class="stat-icon">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
-                    <h3>95%</h3>
+                    <h3 class="counter" data-target="100">0</h3>
                     <p>Success Rate</p>
                 </div>
 
@@ -429,7 +430,7 @@
                     <div class="stat-icon">
                         <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
-                    <h3>10+</h3>
+                    <h3 class="counter" data-target="15">0</h3>
                     <p>Expert Teachers</p>
                 </div>
 
@@ -437,7 +438,7 @@
                     <div class="stat-icon">
                         <i class="fa-solid fa-award"></i>
                     </div>
-                    <h3>5+</h3>
+                    <h3 class="counter" data-target="10">0</h3>
                     <p>Years Experience</p>
                 </div>
             </div>
@@ -449,17 +450,91 @@
     <section id="courses" class="courses-section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Courses <span class="highlight">(Class 7 - 12)</span></h2>
+                <h2>Our Courses <span class="highlight">(Class 5 - 12)</span></h2>
                 <p>
-                    Expert coaching for <b>CBSE &amp; ICSE</b> students from Class 7 to 12.<br>
+                    Expert coaching for <b>CBSE &amp; ICSE</b> students from Class 5 to 12.<br>
                     <span class="sub-text">Structured lessons, regular tests, doubt-solving, and personal guidance for
                         top board results.</span>
                 </p>
             </div>
             <div class="course-cards-grid">
+
+                <!-- Class 5 -->
+                <div class="course-card">
+                    <div class="icon">
+                        <img src="images/class5-icon.png" alt="Class 5" class="class-icon">
+                    </div>
+                    <h3>Class 5</h3>
+                    <ul>
+                        <li>Maths, EVS, English, Hindi, Marathi</li>
+                        <li>Basic concepts & strong foundation</li>
+                        <li>Fun learning with activities</li>
+                    </ul>
+                    <a href="#contact" class="btn">Enroll Now</a>
+
+                    <div class="subject-buttons">
+                        <a href="syllabus/class5-maths.pdf" target="_blank">
+                            <i class="fa-solid fa-calculator"></i> Maths
+                        </a>
+                        <a href="syllabus/class5-evs.pdf" target="_blank">
+                            <i class="fa-solid fa-leaf"></i> EVS
+                        </a>
+                        <a href="syllabus/class5-english.pdf" target="_blank">
+                            <i class="fa-solid fa-book"></i> English
+                        </a>
+                        <a href="syllabus/class5-marathi.pdf" target="_blank">
+                            <i class="fa-solid fa-language"></i> Marathi
+                        </a>
+                        <a href="syllabus/class5-hindi.pdf" target="_blank">
+                            <i class="fa-solid fa-pen"></i> Hindi
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Class 6 -->
+                <div class="course-card">
+                    <div class="icon">
+                        <img src="images/class6-icon.png" alt="Class 6" class="class-icon">
+                    </div>
+                    <h3>Class 6</h3>
+                    <ul>
+                        <li>Maths, Science, English, Social Science</li>
+                        <li>Concept clarity & strong base building</li>
+                        <li>Interactive learning & practice</li>
+                    </ul>
+                    <a href="#contact" class="btn">Enroll Now</a>
+
+                    <div class="subject-buttons">
+                        <a href="syllabus/class6-maths.pdf" target="_blank">
+                            <i class="fa-solid fa-calculator"></i> Maths
+                        </a>
+                        <a href="syllabus/class6-science.pdf" target="_blank">
+                            <i class="fa-solid fa-flask"></i> Science
+                        </a>
+                        <a href="syllabus/class6-english.pdf" target="_blank">
+                            <i class="fa-solid fa-book"></i> English
+                        </a>
+                        <a href="syllabus/class6-marathi.pdf" target="_blank">
+                            <i class="fa-solid fa-language"></i> Marathi
+                        </a>
+                        <a href="syllabus/class6-hindi.pdf" target="_blank">
+                            <i class="fa-solid fa-pen"></i> Hindi
+                        </a>
+                        <a href="syllabus/class6-history.pdf" target="_blank">
+                            <i class="fa-solid fa-landmark"></i> History
+                        </a>
+                        <a href="syllabus/class6-geography.pdf" target="_blank">
+                            <i class="fa-solid fa-earth-asia"></i> Geography
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Class 7 -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="icon">
+                        <img src="images/class7-icon.png" alt="Class 7" class="class-icon">
+                    </div>
                     <h3>Class 7</h3>
                     <ul>
                         <li>Maths, Science, English, Social Science</li>
@@ -495,7 +570,9 @@
 
                 <!-- Class 8 -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-book"></i></div>
+                    <div class="icon">
+                        <img src="images/class8-icon.png" alt="Class 8" class="class-icon">
+                    </div>
                     <h3>Class 8</h3>
                     <ul>
                         <li>All subjects with focus on basics</li>
@@ -531,7 +608,9 @@
 
                 <!-- Class 9 -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-flask"></i></div>
+                    <div class="icon">
+                        <img src="images/class9-icon.png" alt="Class 9" class="class-icon">
+                    </div>
                     <h3>Class 9</h3>
                     <ul>
                         <li>Board exam foundation</li>
@@ -578,7 +657,9 @@
 
                 <!-- Class 10 Maharashtra Board -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="icon">
+                        <img src="images/class10-icon.png" alt="Class 10" class="class-icon">
+                    </div>
 
                     <h3>Class 10 <span class="board">Maharashtra Board</span></h3>
 
@@ -736,7 +817,9 @@
 
                 <!-- Class 11 Science -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-flask"></i></div>
+                    <div class="icon">
+                        <img src="images/class11-science-icon.png" alt="Class 11" class="class-icon">
+                    </div>
                     <h3>Class 11 <span class="science">Science</span></h3>
                     <ul>
                         <li>Physics, Chemistry, Maths, Biology</li>
@@ -791,7 +874,9 @@
 
                 <!-- Class 11 Commerce -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="icon">
+                        <img src="images/class11-commerce-icon.png" alt="Class 11" class="class-icon">
+                    </div>
                     <h3>Class 11 <span class="commerce">Commerce</span></h3>
                     <ul>
                         <li>Accounts, Economics, OC & SP</li>
@@ -834,7 +919,9 @@
 
                 <!-- Class 12 Science -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-flask"></i></div>
+                    <div class="icon">
+                        <img src="images/class12-science-icon.png" alt="Class 12" class="class-icon">
+                    </div>
                     <h3>Class 12 <span class="science">Science</span></h3>
                     <ul>
                         <li>Board exam preparation</li>
@@ -879,7 +966,9 @@
 
                 <!-- Class 12 Commerce -->
                 <div class="course-card">
-                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="icon">
+                        <img src="images/class12-commerce-icon.png" alt="Class 12" class="class-icon">
+                    </div>
                     <h3>Class 12 <span class="commerce">Commerce</span></h3>
                     <ul>
                         <li>Accounts, Economics, OC & SP</li>
@@ -931,6 +1020,115 @@
                 <span>All batches have limited seats. Early enrollment ensures best faculty &amp; personal
                     attention.</span>
             </div>
+        </div>
+    </section>
+
+    <!-- Student Journey -->
+    <section class="journey">
+        <h2>🎓 Complete Student Journey (Class 5 – 12)</h2>
+
+        <div class="journey-container">
+
+            <!-- STEP 1 -->
+            <div class="step" data-step="1">
+                <div class="media">
+                    <img src="images/career.png" alt="Career guidance for students" fetchpriority="high">
+                </div>
+                <h3>Career Guidance</h3>
+                <p>Right direction from experts</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 2 -->
+            <div class="step" data-step="2">
+                <div class="media">
+                    <img src="images/freedemo.png" alt="Free demo class experience" loading="lazy" decoding="async">
+                </div>
+                <h3>Free Demo</h3>
+                <p>Experience our teaching</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 3 -->
+            <div class="step" data-step="3">
+                <div class="media">
+                    <img src="images/admission.png" alt="Easy admission process" loading="lazy" decoding="async">
+                </div>
+                <h3>Easy Admission</h3>
+                <p>Simple & fast process</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 4 -->
+            <div class="step" data-step="4">
+                <div class="media">
+                    <img src="images/class5-12.png" alt="Select class from 5 to 12" loading="lazy" decoding="async">
+                </div>
+                <h3>Select Class</h3>
+                <p>Class 5 to 12</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 5 -->
+            <div class="step" data-step="5">
+                <div class="media">
+                    <img src="images/learning.png" alt="Learning from expert teachers" loading="lazy" decoding="async">
+                </div>
+                <h3>Learn From Experts</h3>
+                <p>Top teachers & structured learning</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 6 -->
+            <div class="step" data-step="6">
+                <div class="media">
+                    <img src="images/notes.png" alt="Study material and notes" loading="lazy" decoding="async">
+                </div>
+                <h3>Study Material</h3>
+                <p>Notes & practice</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 7 -->
+            <div class="step" data-step="7">
+                <div class="media">
+                    <img src="images/test.png" alt="Weekly tests and evaluation" loading="lazy" decoding="async">
+                </div>
+                <h3>Weekly Tests</h3>
+                <p>Regular evaluation</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 8 -->
+            <div class="step" data-step="8">
+                <div class="media">
+                    <img src="images/grooming.png" alt="Personality grooming and communication skills" loading="lazy"
+                        decoding="async">
+                </div>
+                <h3>Personality Grooming</h3>
+                <p>Confidence & communication</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 9 -->
+            <div class="step" data-step="9">
+                <div class="media">
+                    <img src="images/board-prep.png" alt="Board exam preparation" loading="lazy" decoding="async">
+                </div>
+                <h3>Board Preparation</h3>
+                <p>Exam focused learning</p>
+            </div>
+            <div class="arrow">➡</div>
+
+            <!-- STEP 10 -->
+            <div class="step" data-step="10">
+                <div class="media">
+                    <img src="images/success.png" alt="Student success achievement" loading="lazy" decoding="async">
+                </div>
+                <h3>Student Success</h3>
+                <p>Achieve your goals</p>
+            </div>
+
         </div>
     </section>
 
@@ -1534,6 +1732,7 @@
     <script src="js/script.js"></script>
     <!-- <script src="js/disable.js"></script> -->
     <script src="js/rocket.js"></script>
+    <script src="js/STATS SECTION.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
