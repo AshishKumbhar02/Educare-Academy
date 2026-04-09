@@ -1,4 +1,4 @@
-/* Section */
+/* ===== SECTION ===== */
 .faculty-section {
   padding: 100px 20px;
   background: linear-gradient(135deg, #fdfbfb, #ebedfa);
@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Title */
+/* ===== TITLE ===== */
 .section-title h2 {
   font-size: 42px;
   font-weight: 700;
@@ -23,15 +23,40 @@
   margin-bottom: 70px;
 }
 
-/* Grid */
+/* ===== AUTO SCROLL CONTAINER ===== */
 .faculty-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 40px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Card */
+/* ===== SCROLL TRACK ===== */
+.faculty-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollLeft 45s linear infinite;
+  will-change: transform;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== HOVER PAUSE ===== */
+.faculty-container:hover .faculty-track {
+  animation-play-state: paused;
+}
+
+/* ===== CARD ===== */
 .faculty-card {
+  min-width: 280px;
+  flex-shrink: 0;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(15px);
   padding: 35px 20px 25px;
@@ -41,46 +66,9 @@
   transition: all 0.5s ease;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeUp 0.8s ease forwards;
 }
 
-/* Stagger animation */
-.faculty-card:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.faculty-card:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.faculty-card:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.faculty-card:nth-child(4) {
-  animation-delay: 0.8s;
-}
-.faculty-card:nth-child(5) {
-  animation-delay: 1s;
-}
-.faculty-card:nth-child(6) {
-  animation-delay: 1.2s;
-}
-.faculty-card:nth-child(7) {
-  animation-delay: 1.4s;
-}
-.faculty-card:nth-child(8) {
-  animation-delay: 1.6s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 🔥 Animated Gradient Border */
+/* ===== GRADIENT BORDER ===== */
 .faculty-card::before {
   content: "";
   position: absolute;
@@ -101,13 +89,13 @@
   }
 }
 
-/* Hover Effect */
+/* ===== HOVER EFFECT ===== */
 .faculty-card:hover {
-  transform: translateY(-15px) scale(1.04);
+  transform: translateY(-12px) scale(1.04);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
-/* Image */
+/* ===== IMAGE ===== */
 .faculty-card img {
   width: 120px;
   height: 120px;
@@ -122,14 +110,14 @@
   transform: scale(1.15) rotate(3deg);
 }
 
-/* Name */
+/* ===== NAME ===== */
 .faculty-card h3 {
   font-size: 22px;
   color: #222;
   margin-bottom: 8px;
 }
 
-/* Subject Badge */
+/* ===== SUBJECT BADGE ===== */
 .subject {
   display: inline-block;
   background: linear-gradient(90deg, #007bff, #00c6ff);
@@ -141,7 +129,7 @@
   font-weight: 600;
 }
 
-/* Highlights */
+/* ===== HIGHLIGHTS ===== */
 .faculty-highlights {
   list-style: none;
   padding: 0;
@@ -152,7 +140,7 @@
 }
 
 .faculty-highlights li {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   color: #333;
   font-size: 14px;
@@ -169,14 +157,14 @@
   color: #007bff;
 }
 
-/* Hover list */
+/* ===== LIST HOVER ===== */
 .faculty-highlights li:hover {
   transform: translateX(8px);
   background: linear-gradient(90deg, #4facfe, #00f2fe);
   color: #fff;
 }
 
-/* Note */
+/* ===== NOTE ===== */
 .faculty-note {
   margin-top: 60px;
   display: inline-flex;
