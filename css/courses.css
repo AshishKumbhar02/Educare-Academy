@@ -189,20 +189,71 @@
 .subject-buttons a:nth-child(10) { background: #ecfccb; color: #65a30d; }
 .subject-buttons a:nth-child(11) { background: #ede9fe; color: #5b21b6; }
 
-/* NOTE */
+
+/* NOTE BOX */
 .courses-note {
   margin-top: 50px;
-  background: #eef3ff;
-  padding: 15px 20px;
-  border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #444;
-  font-size: 14px;
+  gap: 12px;
+
+  padding: 16px 20px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #e8f0ff, #f5f8ff);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+  color: #1f2937;
+  font-size: 14.5px;
+  line-height: 1.5;
+
+  transition: all 0.3s ease;
 }
 
-.courses-note i { color: #2563eb; font-size: 18px; }
+/* Hover effect */
+.courses-note:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+}
+
+/* ICON CIRCLE */
+.note-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+
+  animation: pulse 2s infinite;
+}
+
+/* ICON STYLE */
+.note-icon i {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* TEXT */
+.courses-note span {
+  font-weight: 500;
+  color: #374151;
+}
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 1024px) {

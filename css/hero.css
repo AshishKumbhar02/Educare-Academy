@@ -35,7 +35,7 @@
 
 .hero-badge {
   display: inline-block;
-  background-color: rgba(211, 47, 47, 0.9);
+  background-color: rgba(19, 19, 19, 0.9);
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 14px;
@@ -452,7 +452,7 @@ label i {
 
 .input-field input:focus,
 .input-field select:focus {
-  border-color: #ff3c3c;
+  border-color: #3b3a3a;
   background: #fff;
   box-shadow: 0 0 8px rgba(255, 60, 60, 0.2);
 }
@@ -633,7 +633,7 @@ label i {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background: rgba(0, 0, 0, 0.1); 
+  background: rgba(0, 0, 0, 0.1);
   padding: 15px;
   border-radius: 10px;
 
