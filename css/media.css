@@ -1,3 +1,13 @@
+@media (min-width: 1200px) {
+  .section-header h2 {
+    font-size: 48px;
+  }
+
+  .main-text {
+    font-size: 20px;
+  }
+}
+
 /* ===================== */
 /* LAPTOP RESPONSIVE */
 /* ===================== */
@@ -121,6 +131,58 @@
   }
   .hero {
     background-attachment: scroll;
+  }
+
+  .courses-section {
+    padding: 70px 15px;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .highlight {
+    font-size: 20px;
+  }
+
+  .main-text {
+    font-size: 16px;
+  }
+
+  .sub-text {
+    gap: 12px;
+  }
+
+  .sub-text span {
+    font-size: 14px;
+  }
+
+  .section-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 0 10px;
+  }
+  .journey h2 {
+    font-size: 24px;
+  }
+
+  .step {
+    min-width: 180px;
+    padding: 12px;
+  }
+
+  .step img {
+    height: 100px;
+  }
+
+  .journey-track {
+    animation: none; /* mobile me auto scroll band */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .step {
+    scroll-snap-align: center;
   }
 }
 
@@ -367,5 +429,45 @@
   .submit-btn {
     padding: 12px;
     font-size: 14px;
+  }
+
+  .courses-section {
+    padding: 60px 12px;
+  }
+
+  .icon-line {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .highlight {
+    display: block;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .main-text {
+    font-size: 14px;
+  }
+
+  /* ✅ Important Fix */
+  .sub-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sub-text span {
+    font-size: 13px;
+  }
+
+  .section-desc {
+    font-size: 14px;
+    line-height: 1.7;
   }
 }

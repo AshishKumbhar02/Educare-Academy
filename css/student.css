@@ -1,18 +1,22 @@
 /* SECTION */
 .journey {
-  padding: 100px 20px;
+  padding: 90px 20px;
   text-align: center;
   font-family: "Poppins", sans-serif;
-
-  /* 🔥 Premium background */
   background: linear-gradient(135deg, #eef2ff, #f8fafc);
 }
 
 .journey h2 {
   font-size: 34px;
   font-weight: 800;
-  margin-bottom: 60px;
   color: #1e3a8a;
+}
+
+.journey-sub {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 50px;
 }
 
 /* WRAPPER */
@@ -21,26 +25,41 @@
   position: relative;
 }
 
+/* LINE (timeline effect) */
+.journey-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  z-index: 0;
+  opacity: 0.2;
+}
+
 /* TRACK */
 .journey-track {
   display: flex;
   gap: 25px;
   width: max-content;
+  animation: scroll 30s linear infinite;
 }
 
 /* CARD */
 .step {
-  min-width: 230px;
+  min-width: 240px;
   background: #ffffff;
   border-radius: 20px;
-  padding: 15px;
+  padding: 18px;
   position: relative;
   transition: 0.4s;
+  z-index: 1;
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* NUMBER BADGE */
+/* NUMBER */
 .step-number {
   position: absolute;
   top: 10px;
@@ -56,7 +75,7 @@
 /* IMAGE */
 .step img {
   width: 100%;
-  height: 140px;
+  height: 130px;
   object-fit: contain;
 }
 
@@ -74,11 +93,20 @@
 
 /* HOVER */
 .step:hover {
-  transform: translateY(-10px) scale(1.04);
+  transform: translateY(-12px) scale(1.05);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover glow */
 .step:hover .step-number {
   background: linear-gradient(135deg, #9333ea, #2563eb);
+}
+
+/* AUTO SCROLL */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
