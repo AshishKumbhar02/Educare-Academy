@@ -41,7 +41,7 @@
     display: flex;
   }
 
-  .call-btn {
+  .header-buttons {
     display: none;
   }
 
@@ -131,6 +131,17 @@
   }
   .hero {
     background-attachment: scroll;
+  }
+  .academy-poster {
+    margin: 40px auto;
+  }
+
+  .academy-poster img {
+    border-radius: 15px;
+  }
+
+  .about-image {
+    height: 280px;
   }
 
   .courses-section {
@@ -429,6 +440,19 @@
   .submit-btn {
     padding: 12px;
     font-size: 14px;
+  }
+
+  .academy-poster {
+    margin: 30px auto;
+  }
+
+  .academy-poster img {
+    border-radius: 12px;
+  }
+
+  .about-image {
+    height: 220px;
+    border-radius: 15px;
   }
 
   .courses-section {

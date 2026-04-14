@@ -260,25 +260,6 @@
   box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
 }
 
-/* SUBMIT BUTTON */
-
-.submit-btn {
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, #d32f2f, #f44336);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
-}
 
 /* ADMISSION FORM */
 .premium-admission-form {
@@ -325,53 +306,11 @@
   margin-bottom: 25px;
 }
 
-/* input field */
-
-.input-field {
-  position: relative;
-  width: 100%;
-}
-
-.input-field i {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #555;
-  font-size: 16px;
-}
-
-.input-field input,
-.input-field select {
-  width: 100%;
-  height: 45px;
-  padding-left: 45px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  outline: none;
-  background: #fff;
-  color: #333;
-}
-
-.input-field select {
-  appearance: none;
-}
-
-/* full width field */
-
-.input-field.full {
-  grid-column: 1/-1;
-}
-
 label i {
   margin-right: 6px;
   color: #ff6b00;
 }
 
-.submit-btn i {
-  margin-right: 6px;
-}
 
 .modal-form h2 i {
   color: #ff6b00;
@@ -498,17 +437,6 @@ label i {
   cursor: pointer;
 }
 
-/* SUBMIT */
-.submit-btn {
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-}
 
 .urgency {
   color: #d32f2f;
@@ -563,23 +491,28 @@ label i {
   width: 100%;
   padding: 14px;
   border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  color: white;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(255, 75, 43, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.35);
 }
 
+/* Hover Effect */
 .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 75, 43, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(118, 75, 162, 0.5);
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
 }
 
+/* Click Effect */
 .submit-btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
 }
 
 .festival-banner {
@@ -642,8 +575,6 @@ label i {
 
   justify-content: center;
   align-items: center;
-
-  backdrop-filter: blur(10px);
 }
 /* IMAGE */
 .popup-content {

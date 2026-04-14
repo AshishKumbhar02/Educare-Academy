@@ -32,6 +32,7 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none !important;
 }
 
 .logo img {
@@ -92,25 +93,42 @@ nav ul li a:hover {
   color: #0d6efd;
 }
 
-/* CALL BUTTON */
-.call-btn {
-  background: linear-gradient(135deg, #0d6efd, #4dabff);
-  color: white;
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
+/* HEADER BUTTONS */
+.header-buttons {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 5px 12px rgba(13, 110, 253, 0.3);
+  gap: 10px;
 }
 
-.call-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.4);
+/* COMMON BUTTON STYLE */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CALL BUTTON */
+.btn.call {
+  background: linear-gradient(135deg, #0d6efd, #4dabff);
+}
+
+/* WHATSAPP BUTTON */
+.btn.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+
+/* ICON ANIMATION */
+.btn i {
+  transition: 0.3s;
 }
 
 /* Hamburger */
