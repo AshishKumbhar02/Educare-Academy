@@ -143,6 +143,9 @@
   .about-image {
     height: 280px;
   }
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .courses-section {
     padding: 70px 15px;

@@ -1,21 +1,19 @@
-const counters = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
-    counter.innerText = '0';
+counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const current = +counter.innerText;
+    const increment = target / 400;
 
-        const increment = target / 200;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 60);
+    } else {
+      counter.innerText = target;
+    }
+  };
 
-        if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCounter, 40);
-        } else {
-            counter.innerText = target;
-        }
-    };
-
-    updateCounter();
+  updateCount();
 });

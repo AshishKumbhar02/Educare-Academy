@@ -2,7 +2,7 @@
 /* ABOUT SECTION */
 /* ========================= */
 .about-section {
-  padding: 100px 20px;
+  padding: 80px 20px 20px;
   background: linear-gradient(135deg, #eef2ff, #fdf2f8);
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -102,8 +102,8 @@
 .academy-poster {
   margin: 60px auto;
   position: relative;
-  max-width: 1200px;   /* center + limit width */
-  padding: 0 15px;     /* mobile side spacing */
+  max-width: 1200px; /* center + limit width */
+  padding: 0 15px; /* mobile side spacing */
 }
 
 /* IMAGE */
@@ -113,7 +113,9 @@
   display: block;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 /* Glow Effect */
@@ -227,13 +229,13 @@
 
   background: rgba(255, 255, 255, 0.6);
 
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* SIMPLE GRADIENT BORDER (no webkit) */
 .about-image {
   border: 3px solid transparent;
-  background-image: 
+  background-image:
     linear-gradient(#fff, #fff),
     linear-gradient(135deg, #2563eb, #06b6d4, #9333ea);
   background-origin: border-box;
@@ -261,7 +263,7 @@
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255,255,255,0.4),
+    rgba(255, 255, 255, 0.4),
     transparent
   );
   transition: 0.7s;
@@ -278,9 +280,15 @@
 
 /* FLOAT ANIMATION */
 @keyframes floatImage {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .about-image img {
@@ -568,68 +576,36 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  margin: 80px 0;
-}
-
-/* CARD */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin: 80px 0;
+  margin-bottom: 0;
 }
 
 /* CARD */
 .stat-card {
   position: relative;
-  padding: 40px 25px;
+  padding: 45px 25px;
   border-radius: 20px;
   text-align: center;
   overflow: hidden;
   color: #fff;
+
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   transition: 0.4s ease;
-
-  /* Gradient background */
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Different colors */
-.stat-card:nth-child(2) {
-  background: linear-gradient(135deg, #065f46, #10b981);
-}
-
-.stat-card:nth-child(3) {
-  background: linear-gradient(135deg, #b45309, #f59e0b);
-}
-
-.stat-card:nth-child(4) {
-  background: linear-gradient(135deg, #9d174d, #ec4899);
-}
-
-/* Glow layer */
-.stat-card::before {
-  content: "";
+/* Background icon */
+.stat-bg-icon {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top left,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  opacity: 0;
-  transition: 0.4s;
+  font-size: 90px;
+  opacity: 0.08;
+  top: 10px;
+  right: 15px;
 }
 
 /* Hover */
 .stat-card:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-}
-
-.stat-card:hover::before {
-  opacity: 1;
+  transform: translateY(-10px) scale(1.05);
 }
 
 /* ICON */
@@ -646,46 +622,30 @@
   justify-content: center;
 
   background: rgba(255, 255, 255, 0.2);
-  transition: 0.4s;
-}
-
-/* Icon animation */
-.stat-card:hover .stat-icon {
-  transform: scale(1.2) rotate(10deg);
+  backdrop-filter: blur(6px);
 }
 
 /* NUMBER */
 .stat-card h3 {
   font-size: 42px;
   font-weight: 800;
-  margin: 10px 0;
-  letter-spacing: 1px;
 }
 
 /* TEXT */
 .stat-card p {
   font-size: 15px;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
-/* Shine effect */
-.stat-card span.shine {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.2) 30%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0.2) 70%
-  );
-  transform: rotate(25deg);
-  top: -150%;
-  left: -150%;
-  transition: 0.6s;
+/* Different colors */
+.stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #065f46, #10b981);
 }
 
-.stat-card:hover span.shine {
-  top: 100%;
-  left: 100%;
+.stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #92400e, #f59e0b);
+}
+
+.stat-card:nth-child(4) {
+  background: linear-gradient(135deg, #9d174d, #ec4899);
 }
