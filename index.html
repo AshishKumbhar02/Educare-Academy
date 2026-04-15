@@ -189,92 +189,118 @@
 
     <!-- ADMISSION FORM -->
     <div class="premium-admission-form" id="admission">
-      <!-- 🌸 FESTIVAL IMAGE -->
+
+      <!-- ================= BANNER ================= -->
       <div class="festival-banner">
-        <img src="images/Summer.png" alt="Summer Offer" id="festivalImg" />
+        <img id="festivalImg" src="images/summer1.png" alt="Offer Banner" />
         <div class="festival-text">🌞 Summer Bonanza Offer 🎉</div>
       </div>
 
+      <!-- ================= IMAGE POPUP ================= -->
       <div id="imagePopup" class="image-popup">
         <span class="close-popup">&times;</span>
-        <img class="popup-content" id="popupImg" />
+        <img id="popupImg" alt="Popup Image" />
       </div>
 
-      <!-- HEADER -->
+      <!-- ================= HEADER ================= -->
       <div class="form-top">
         <h3>🎯 Free Demo + Admission 2026</h3>
         <p>Scholarship Test Available</p>
       </div>
 
-      <!-- URGENCY -->
       <p class="urgency">⏳ Only 20 Seats Left!</p>
 
-      <!-- TRUST -->
+      <!-- ================= TRUST ================= -->
       <div class="trust-box">
         <span>✅ 100+ Students</span>
         <span>⭐ 3.9 Rating</span>
         <span>🏆 10+ Years</span>
       </div>
 
-      <!-- FORM -->
-      <form class="form-content" id="admissionForm">
+      <!-- ================= FORM ================= -->
+      <form id="admissionForm">
+
         <div class="form-grid">
+
           <!-- NAME -->
           <div class="input-field">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa fa-user"></i>
             <input type="text" id="add_name" placeholder="Full Name" required />
           </div>
 
-          <!-- MOBILE -->
+          <!-- EMAIL -->
+          <div class="input-field">
+            <i class="fa fa-envelope"></i>
+            <input type="email" id="add_email" placeholder="Email Address" required />
+          </div>
+
+          <!-- MOBILE + OTP BUTTON -->
           <div class="input-field mobile-field">
-            <i class="fa-solid fa-phone"></i>
+            <i class="fa fa-phone"></i>
             <input type="tel" id="phone" placeholder="Mobile Number" maxlength="10" required />
-            <button type="button" id="otpBtn" class="otp-btn" onclick="sendOTP()" style="display: none">
+            <button type="button" id="otpBtn" onclick="sendOTP()" style="display:none;">
               Send OTP
             </button>
+          </div>
+
+          <!-- CITY -->
+          <div class="input-field">
+            <i class="fa fa-location-dot"></i>
+            <input type="text" id="add_city" placeholder="City" />
           </div>
 
           <!-- MASKED NUMBER -->
           <p id="showNumber" class="masked-text"></p>
 
-          <!-- OTP FIELD (HIDDEN FIRST) -->
-          <div class="input-field full" id="otpSection" style="display: none">
-            <i class="fa-solid fa-lock"></i>
+          <!-- OTP INPUT (HIDDEN FIRST) -->
+          <div class="input-field full" id="otpSection" style="display:none;">
+            <i class="fa fa-lock"></i>
             <input type="text" id="add_otp" placeholder="Enter OTP" />
           </div>
 
           <!-- VERIFY BUTTON (HIDDEN FIRST) -->
-          <div class="otp-actions full" id="verifySection" style="display: none">
+          <div class="otp-actions full" id="verifySection" style="display:none;">
             <button type="button" onclick="verifyOTP()">Verify OTP</button>
           </div>
 
           <!-- CLASS -->
-          <div class="input-field full">
-            <i class="fa-solid fa-graduation-cap"></i>
+          <div class="input-field">
+            <i class="fa fa-graduation-cap"></i>
             <select id="add_class" required>
               <option value="">Select Class</option>
-              <option value="5">5th</option>
-              <option value="6">6th</option>
-              <option value="7">7th</option>
-              <option value="8">8th</option>
-              <option value="9">9th</option>
-              <option value="10">10th</option>
-              <option value="11">11th</option>
-              <option value="12">12th</option>
+              <option>5th</option>
+              <option>6th</option>
+              <option>7th</option>
+              <option>8th</option>
+              <option>9th</option>
+              <option>10th</option>
+              <option>11th</option>
+              <option>12th</option>
             </select>
           </div>
+
+          <!-- SCHOOL -->
+          <div class="input-field">
+            <i class="fa fa-school"></i>
+            <input type="text" id="add_school" placeholder="School Name" />
+          </div>
+
         </div>
+
         <!-- SUBMIT -->
-        <button type="submit" class="submit-btn" id="add_submitBtn" disabled>
+        <button type="submit" id="add_submitBtn" disabled>
           🚀 Book Free Demo
         </button>
+
       </form>
 
-      <!-- WHATSAPP -->
-      <a href="https://wa.me/917045529450" class="whatsapp-btn">
+      <!-- ================= WHATSAPP ================= -->
+      <a class="whatsapp-btn" href="https://wa.me/917045529450">
         💬 Chat on WhatsApp
       </a>
+
     </div>
+
   </section>
 
   <!-- ABOUT SECTION -->

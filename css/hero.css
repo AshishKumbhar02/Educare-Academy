@@ -127,16 +127,13 @@
 .demo-modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .demo-modal.active {
@@ -145,20 +142,18 @@
 
 .modal-box {
   background: #fff;
-  border-radius: 12px;
-  padding: 40px;
+  border-radius: 14px;
+  padding: 30px;
   max-width: 900px;
   width: 100%;
-  position: relative;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
-  animation: modalOpen 0.3s ease;
-
   max-height: 90vh;
   overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalOpen 0.3s ease;
 }
 
 /* OPEN ANIMATION */
-
 @keyframes modalOpen {
   from {
     opacity: 0;
@@ -171,16 +166,15 @@
 }
 
 /* CLOSE BUTTON */
-
 .close-btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
+  top: 12px;
+  right: 12px;
+  font-size: 26px;
+  background: transparent;
   border: none;
-  font-size: 28px;
   cursor: pointer;
-  color: #666;
+  color: #555;
   transition: 0.3s;
 }
 
@@ -193,12 +187,11 @@
 
 .modal-content {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
 }
 
 /* IMAGE */
-
 .modal-image {
   flex: 1;
   display: flex;
@@ -207,27 +200,29 @@
 
 .modal-image img {
   width: 100%;
-  max-width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* FORM */
 
+/* FORM SIDE */
 .modal-form {
   flex: 1;
 }
 
+/* TITLE */
 .modal-form h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #333;
-  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #222;
 }
 
+/* DESCRIPTION */
 .modal-form p {
+  font-size: 14px;
   color: #666;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   line-height: 1.5;
 }
 
@@ -260,57 +255,58 @@
   box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
 }
 
-
 /* ADMISSION FORM */
 .premium-admission-form {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  padding: 60px 50px;
-  border-radius: 15px;
-  color: white;
-  margin: 80px auto;
-  max-width: 650px;
-  width: 90%;
-  box-shadow: 0 15px 50px rgba(102, 126, 234, 0.4);
-  transition: 0.4s;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .premium-admission-form:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.5);
+  transform: translateY(-5px);
 }
-
-/* top heading */
 
 .form-top {
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 .form-top h3 {
-  font-size: 34px;
-  margin-bottom: 10px;
-  font-weight: 700;
+  font-size: 26px;
+  color: #333;
 }
 
 .form-top p {
-  font-size: 16px;
-  opacity: 0.9;
+  color: #666;
+}
+
+.urgency {
+  text-align: center;
+  color: #e53935;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 /* grid */
-
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-bottom: 25px;
+  gap: 15px;
 }
 
 label i {
   margin-right: 6px;
   color: #ff6b00;
 }
-
 
 .modal-form h2 i {
   color: #ff6b00;
@@ -319,11 +315,6 @@ label i {
 
 .email-box {
   position: relative;
-}
-
-.email-box input {
-  width: 100%;
-  padding-right: 120px;
 }
 
 .email-box button {
@@ -365,54 +356,75 @@ label i {
 /* INPUT FIELD */
 .input-field {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .input-field i {
   position: absolute;
-  left: 15px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   color: #888;
+  font-size: 14px;
 }
 
-/* INPUT */
 .input-field input,
 .input-field select {
   width: 100%;
-  height: 45px;
-  padding: 0 15px 0 45px;
-  border-radius: 8px;
-  border: 2px solid #e0e0e0;
+  padding: 12px 12px 12px 40px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
   font-size: 14px;
-  background: #f9f9f9;
   transition: 0.3s;
+  background: #fff;
 }
 
 .input-field input:focus,
 .input-field select:focus {
-  border-color: #3b3a3a;
-  background: #fff;
-  box-shadow: 0 0 8px rgba(255, 60, 60, 0.2);
+  border-color: #6a5acd;
+  box-shadow: 0 0 6px rgba(106, 90, 205, 0.2);
+}
+
+
+#otpBtn {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#otpSection,
+#verifySection {
+  display: none;
+  grid-column: span 2;
 }
 
 /* EMAIL BUTTON INSIDE */
-.email-field input {
-  padding-right: 110px;
+.email-field {
+  position: relative;
 }
+
 
 .email-field button {
   position: absolute;
   right: 5px;
   top: 5px;
-  height: 35px;
+  height: 34px;
   padding: 0 12px;
   border: none;
-  background: #0f0f0f;
-  color: white;
+  background: #111;
+  color: #fff;
   border-radius: 6px;
   font-size: 12px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .email-field button:disabled {
@@ -420,71 +432,28 @@ label i {
   cursor: not-allowed;
 }
 
-/* OTP BUTTONS */
-.otp-actions {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.otp-actions button {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  background: #333;
-  color: #fff;
-  cursor: pointer;
-}
-
-
-.urgency {
-  color: #d32f2f;
-  font-weight: 700;
-  text-align: center;
-  margin: 15px 0;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
 .trust-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
   font-size: 12px;
-  margin: 20px 0 20px;
-  padding: 15px;
-  background: #f5f5f5;
-  border-radius: 8px;
-  color: #555;
-  gap: 10px;
-}
-
-.trust-box span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  color: #444;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .whatsapp-btn {
   display: block;
   text-align: center;
-  background: linear-gradient(135deg, #25d366, #1da851);
-  color: white;
+  margin-top: 15px;
   padding: 12px;
-  margin-top: 12px;
-  border-radius: 8px;
+  background: #25d366;
+  color: white;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-}
-
-.whatsapp-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  font-weight: bold;
 }
 
 .submit-btn {
@@ -517,42 +486,28 @@ label i {
 
 .festival-banner {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .festival-banner img {
   width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.5s;
 }
 
-.festival-banner img {
-  width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
-}
-
-/* TEXT OVERLAY */
 .festival-text {
   position: absolute;
-  bottom: 8px;
+  bottom: 10px;
   left: 10px;
   right: 10px;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  padding: 6px;
-  font-size: 12px;
-  border-radius: 6px;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 8px;
   text-align: center;
 }
 
@@ -560,40 +515,28 @@ label i {
 .image-popup {
   display: none;
   position: fixed;
-  z-index: 9999;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  background: rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
   border-radius: 10px;
-
-  width: auto;
-  height: auto;
-
-  justify-content: center;
-  align-items: center;
-}
-/* IMAGE */
-.popup-content {
-  max-width: 90vw;
-  max-height: 80vh;
-  border-radius: 10px;
-  display: block;
+  z-index: 999;
 }
 
-/* CLOSE BUTTON */
+#popupImg {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
 .close-popup {
   position: absolute;
   top: -10px;
   right: -10px;
   background: white;
   color: black;
-  font-size: 18px;
   border-radius: 50%;
-  padding: 5px 10px;
+  padding: 5px 8px;
   cursor: pointer;
 }
 
@@ -635,16 +578,31 @@ label i {
 
 .masked-text {
   display: none;
-  font-size: 13px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 6px;
-  border-radius: 6px;
-  margin: 5px 0;
+  grid-column: span 2;
   text-align: center;
+  font-size: 13px;
+  color: #444;
+  background: #f1f1f1;
+  padding: 8px;
+  border-radius: 8px;
 }
 
-/* OTP BUTTON */
-.otp-actions button {
-  background: #222;
+#add_submitBtn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #6a5acd, #836fff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#add_submitBtn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(106, 90, 205, 0.3);
 }

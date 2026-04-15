@@ -208,6 +208,14 @@
   .section-header h2 {
     font-size: 28px;
   }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-box {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
 
   .about-intro {
     font-size: 15px;
