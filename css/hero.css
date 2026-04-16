@@ -488,14 +488,15 @@ label i {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  background: #000;
 }
 
 .festival-banner img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;   /* 👈 yeh crop problem solve karega */
+  background: #000;
   border-radius: 15px;
-  transition: 0.5s;
 }
 
 .festival-text {
@@ -509,6 +510,32 @@ label i {
   font-size: 13px;
   border-radius: 8px;
   text-align: center;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.nav-btn:hover {
+  background: rgba(0,0,0,0.8);
 }
 
 /* POPUP BACKGROUND */

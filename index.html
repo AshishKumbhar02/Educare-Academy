@@ -192,8 +192,15 @@
 
       <!-- ================= BANNER ================= -->
       <div class="festival-banner">
-        <img id="festivalImg" src="images/Summer10.png" alt="Offer Banner" />
+
+        <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+
+        <img id="festivalImg" src="images/Summer9.png" alt="Offer Banner" />
+
+        <button class="nav-btn next" onclick="nextSlide()">❯</button>
+
         <div class="festival-text">🌞 Summer Bonanza Offer 🎉</div>
+
       </div>
 
       <!-- ================= IMAGE POPUP ================= -->
@@ -1924,7 +1931,7 @@
   <script src="js/student.js"></script>
   <script src="js/email.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script src="js/admission.js"></script>
+  <script src="js/admission.js" defer></script>
 
   <!--  Auto-duplicate faculty cards for seamless scrolling -->
   <script id="autoDuplicate">

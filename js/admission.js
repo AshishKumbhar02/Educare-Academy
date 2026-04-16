@@ -1,79 +1,86 @@
-// ================= SLIDER =================
-const images = [
-  "images/summer1.png",
-  "images/summer2.png",
-  "images/summer3.png",
-  "images/summer4.png"
-];
+document.addEventListener("DOMContentLoaded", function () {
 
-let i = 0;
-const img = document.getElementById("festivalImg");
+  // ================= SLIDER =================
+  const images = [
+    "images/Summer9.png",
+    "images/Summer10.png",
+    "images/Summer11_12science.png",
+  ];
 
-setInterval(() => {
-  i = (i + 1) % images.length;
-  img.src = images[i];
-}, 3000);
+  let i = 0;
+  const img = document.getElementById("festivalImg");
 
-// ================= POPUP =================
-const popup = document.getElementById("imagePopup");
-const popupImg = document.getElementById("popupImg");
+  window.nextSlide = function () {
+    i = (i + 1) % images.length;
+    img.src = images[i];
+  };
 
-img.onclick = () => {
-  popup.style.display = "block";
-  popupImg.src = img.src;
-};
+  window.prevSlide = function () {
+    i = (i - 1 + images.length) % images.length;
+    img.src = images[i];
+  };
 
-document.querySelector(".close-popup").onclick = () => {
-  popup.style.display = "none";
-};
+  // ================= POPUP =================
+  const popup = document.getElementById("imagePopup");
+  const popupImg = document.getElementById("popupImg");
 
-// ================= OTP =================
-let otp = "";
+  img.onclick = () => {
+    popup.style.display = "block";
+    popupImg.src = img.src;
+  };
 
-const phone = document.getElementById("phone");
-const otpBtn = document.getElementById("otpBtn");
-const submitBtn = document.getElementById("add_submitBtn");
+  document.querySelector(".close-popup").onclick = () => {
+    popup.style.display = "none";
+  };
 
-phone.addEventListener("input", () => {
-  phone.value = phone.value.replace(/\D/g, "");
+  // ================= OTP =================
+  let otp = "";
 
-  if (phone.value.length === 10) {
-    otpBtn.style.display = "block";
-  } else {
-    otpBtn.style.display = "none";
-  }
-});
+  const phone = document.getElementById("phone");
+  const otpBtn = document.getElementById("otpBtn");
+  const submitBtn = document.getElementById("add_submitBtn");
 
-function sendOTP() {
-  otp = Math.floor(1000 + Math.random() * 9000);
-  alert("OTP: " + otp);
+  phone.addEventListener("input", () => {
+    phone.value = phone.value.replace(/\D/g, "");
 
-  document.getElementById("otpSection").style.display = "block";
-  document.getElementById("verifySection").style.display = "block";
+    if (phone.value.length === 10) {
+      otpBtn.style.display = "block";
+    } else {
+      otpBtn.style.display = "none";
+    }
+  });
 
-  document.getElementById("showNumber").style.display = "block";
-  document.getElementById("showNumber").innerText =
-    "Sent to ******" + phone.value.slice(6);
-}
+  window.sendOTP = function () {
+    otp = Math.floor(1000 + Math.random() * 9000);
+    alert("OTP: " + otp);
 
-function verifyOTP() {
-  const userOTP = document.getElementById("add_otp").value;
+    document.getElementById("otpSection").style.display = "block";
+    document.getElementById("verifySection").style.display = "block";
 
-  if (userOTP == otp) {
-    alert("OTP Verified");
-    submitBtn.disabled = false;
-  } else {
-    alert("Wrong OTP");
-  }
-}
+    document.getElementById("showNumber").style.display = "block";
+    document.getElementById("showNumber").innerText =
+      "Sent to ******" + phone.value.slice(6);
+  };
 
-// ================= SUBMIT =================
-document.getElementById("admissionForm")
-.addEventListener("submit", (e) => {
-  e.preventDefault();
+  window.verifyOTP = function () {
+    const userOTP = document.getElementById("add_otp").value;
 
-  alert("Form Submitted Successfully!");
+    if (userOTP == otp) {
+      alert("OTP Verified");
+      submitBtn.disabled = false;
+    } else {
+      alert("Wrong OTP");
+    }
+  };
 
-  e.target.reset();
-  submitBtn.disabled = true;
+  // ================= SUBMIT =================
+  document.getElementById("admissionForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    alert("Form Submitted Successfully!");
+
+    e.target.reset();
+    submitBtn.disabled = true;
+  });
+
 });
