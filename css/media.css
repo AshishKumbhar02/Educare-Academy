@@ -132,12 +132,9 @@
   .hero {
     background-attachment: scroll;
   }
-  .academy-poster {
-    margin: 40px auto;
-  }
 
-  .academy-poster img {
-    border-radius: 15px;
+  .festival-banner img {
+    max-height: 180px;
   }
 
   .about-image {
@@ -423,6 +420,9 @@
     top: 8px;
     right: 10px;
   }
+   .festival-banner img {
+    max-height: 150px;
+  }
   .premium-admission-form {
     padding: 30px 20px;
     margin: 40px 15px;
@@ -451,14 +451,6 @@
   .submit-btn {
     padding: 12px;
     font-size: 14px;
-  }
-
-  .academy-poster {
-    margin: 30px auto;
-  }
-
-  .academy-poster img {
-    border-radius: 12px;
   }
 
   .about-image {

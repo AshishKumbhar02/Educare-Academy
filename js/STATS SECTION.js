@@ -5,11 +5,11 @@ counters.forEach((counter) => {
     const target = +counter.getAttribute("data-target");
     const count = +counter.innerText;
 
-    const increment = target / 400;
+    const increment = target / 800;
 
     if (count < target) {
       counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 60);
+      setTimeout(updateCount, 100);
     } else {
       counter.innerText = target;
     }
