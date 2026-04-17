@@ -2,9 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ================= SLIDER =================
   const images = [
-    "images/Summer9.png",
-    "images/Summer10.png",
-    "images/Summer11_12science.png",
+    "images/class9.png",
+    "images/class10.png",
+    "images/class11_12commerce.png",
+    "images/class11_12science.png",
+    "images/class12commerce.png",
+    "images/class12science.png",
   ];
 
   let i = 0;
