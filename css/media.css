@@ -195,6 +195,24 @@
   .step {
     scroll-snap-align: center;
   }
+
+  .faq-contact-box-inner {
+    padding: 30px 20px;
+  }
+
+  .faq-contact-box-inner h3 {
+    font-size: 22px;
+  }
+
+  .faq-actions {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .call-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ========================= */
@@ -279,13 +297,8 @@
     padding: 35px 20px;
   }
 
-  .faculty-note {
-    font-size: 14px;
-    padding: 15px 20px;
-  }
-
   .gallery-section {
-    padding: 80px 15px;
+    padding: 20px 10px;
   }
 
   .gallery-section .section-title h2 {
@@ -332,15 +345,6 @@
 
   .faq-tips {
     padding: 20px;
-  }
-
-  .faq-contact {
-    font-size: 14px;
-  }
-
-  .faq-contact .btn {
-    padding: 10px 18px;
-    font-size: 14px;
   }
 }
 
@@ -420,7 +424,7 @@
     top: 8px;
     right: 10px;
   }
-   .festival-banner img {
+  .festival-banner img {
     max-height: 150px;
   }
   .premium-admission-form {

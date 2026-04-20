@@ -1,6 +1,6 @@
 /* ===== SECTION ===== */
 .faculty-section {
-  padding: 100px 20px;
+  padding: 40px 20px;
   background: linear-gradient(135deg, #fdfbfb, #ebedfa);
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -257,70 +257,6 @@
   color: #fff;
 }
 
-/* ===== NOTE ===== */
-.faculty-note {
-  margin-top: 60px;
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 22px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #fff7e6, #f0f7ff);
-  border: 1px solid rgba(255, 180, 0, 0.25);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  font-size: 14.5px;
-  color: #2d2d2d;
-  line-height: 1.5;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Soft glowing animation background */
-.faculty-note::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,180,0,0.15), transparent 60%);
-  animation: glowMove 4s linear infinite;
-}
-
-/* Hover effect */
-.faculty-note:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 18px 40px rgba(255, 180, 0, 0.15);
-}
-
-/* ICON WRAPPER */
-.faculty-icon {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ffb400, #ffda66);
-  box-shadow: 0 8px 20px rgba(255, 180, 0, 0.35);
-  z-index: 1;
-  animation: floatIcon 2.5s ease-in-out infinite;
-}
-
-/* ICON */
-.faculty-icon i {
-  color: #fff;
-  font-size: 18px;
-}
-
-/* TEXT */
-.faculty-note span {
-  position: relative;
-  z-index: 1;
-  font-weight: 500;
-  color: #333;
-}
 
 /* ICON FLOAT */
 @keyframes floatIcon {
