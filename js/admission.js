@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // ================= SLIDER =================
   const images = [
+    "images/class5.png",
+    "images/class6.png",
     "images/class7.png",
     "images/class8.png",
     "images/class9.png",
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "images/class11commerce.png",
     "images/class12commerce.png",
     // "images/class11_12commerce.png",
-    "images/class11_12science.png",
+    // "images/class11_12science.png",
     // "images/class12commerce.png",
     // "images/class12science.png",
   ];
@@ -89,5 +90,4 @@ document.addEventListener("DOMContentLoaded", function () {
     e.target.reset();
     submitBtn.disabled = true;
   });
-
 });
