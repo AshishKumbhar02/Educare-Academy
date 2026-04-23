@@ -58,10 +58,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .course-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -140,9 +136,6 @@
   .about-image {
     height: 280px;
   }
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .courses-section {
     padding: 70px 15px;
@@ -152,10 +145,20 @@
     font-size: 32px;
   }
 
+  .title-with-icon i {
+    font-size: 26px;
+    padding: 10px;
+  }
+
   .highlight {
     font-size: 20px;
   }
 
+  .icon-line i {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
   .main-text {
     font-size: 16px;
   }
@@ -241,10 +244,6 @@
   }
 
   .info-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
     grid-template-columns: 1fr;
   }
 

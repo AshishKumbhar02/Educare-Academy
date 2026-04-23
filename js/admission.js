@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "images/class10.png",
     "images/class11commerce.png",
     "images/class12commerce.png",
-    // "images/class11_12commerce.png",
-    // "images/class11_12science.png",
-    // "images/class12commerce.png",
-    // "images/class12science.png",
+    "images/class11science.png",
+    "images/class12science.png",
   ];
 
   let i = 0;
