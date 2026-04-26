@@ -8,53 +8,53 @@ menuToggle.addEventListener("click", function () {
 });
 
 // Book free Demo Modal
-const openDemo = document.getElementById("openDemo");
-const demoModal = document.getElementById("demoModal");
-const closeDemo = document.getElementById("closeDemo");
+// const openDemo = document.getElementById("openDemo");
+// const demoModal = document.getElementById("demoModal");
+// const closeDemo = document.getElementById("closeDemo");
 
-openDemo.onclick = () => {
-  demoModal.style.display = "flex";
-};
+// openDemo.onclick = () => {
+//   demoModal.style.display = "flex";
+// };
 
-closeDemo.onclick = () => {
-  demoModal.style.display = "none";
-};
+// closeDemo.onclick = () => {
+//   demoModal.style.display = "none";
+// };
 
-window.onclick = (e) => {
-  if (e.target == demoModal) {
-    demoModal.style.display = "none";
-  }
-};
+// window.onclick = (e) => {
+//   if (e.target == demoModal) {
+//     demoModal.style.display = "none";
+//   }
+// };
 
 // Form Validation
-document.getElementById("demoForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+// document.getElementById("demoForm").addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  let name = document.getElementById("name").value.trim();
-  let mobile = document.getElementById("mobile").value.trim();
-  let email = document.getElementById("email").value.trim();
+//   let name = document.getElementById("name").value.trim();
+//   let mobile = document.getElementById("mobile").value.trim();
+//   let email = document.getElementById("email").value.trim();
 
-  let namePattern = /^[A-Za-z ]{3,40}$/;
-  let mobilePattern = /^[6-9][0-9]{9}$/;
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   let namePattern = /^[A-Za-z ]{3,40}$/;
+//   let mobilePattern = /^[6-9][0-9]{9}$/;
+//   let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!namePattern.test(name)) {
-    alert("Enter valid full name");
-    return;
-  }
+//   if (!namePattern.test(name)) {
+//     alert("Enter valid full name");
+//     return;
+//   }
 
-  if (!mobilePattern.test(mobile)) {
-    alert("Enter valid mobile number");
-    return;
-  }
+//   if (!mobilePattern.test(mobile)) {
+//     alert("Enter valid mobile number");
+//     return;
+//   }
 
-  if (!emailPattern.test(email)) {
-    alert("Enter valid email");
-    return;
-  }
+//   if (!emailPattern.test(email)) {
+//     alert("Enter valid email");
+//     return;
+//   }
 
-  alert("Form submitted successfully");
-});
+//   alert("Form submitted successfully");
+// });
 
 // FAQ Accordion
 const faqItems = document.querySelectorAll(".faq-item");

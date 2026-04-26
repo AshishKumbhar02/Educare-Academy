@@ -6,10 +6,12 @@
   background: linear-gradient(135deg, #eef2ff, #f8fafc);
 }
 
+/* TITLE */
 .journey h2 {
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 800;
   color: #1e3a8a;
+  letter-spacing: 0.5px;
 }
 
 .journey-sub {
@@ -25,76 +27,99 @@
   position: relative;
 }
 
-/* LINE (timeline effect) */
+/* LINE */
 .journey-wrapper::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #2563eb, #9333ea);
+  height: 5px;
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+  opacity: 0.15;
   z-index: 0;
-  opacity: 0.2;
 }
 
 /* TRACK */
 .journey-track {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   width: max-content;
-  animation: scroll 30s linear infinite;
+  animation: scroll 28s linear infinite;
+}
+
+/* Pause on hover */
+.journey-wrapper:hover .journey-track {
+  animation-play-state: paused;
 }
 
 /* CARD */
 .step {
-  min-width: 240px;
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 18px;
+  min-width: 260px;
+  padding: 20px;
+  border-radius: 22px;
   position: relative;
-  transition: 0.4s;
   z-index: 1;
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  /* Gradient border trick without webkit */
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, #2563eb, #9333ea) border-box;
+
+  border: 1px solid transparent;
+
+  transition: all 0.4s ease;
+
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* NUMBER */
 .step-number {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
+
   background: linear-gradient(135deg, #2563eb, #9333ea);
   color: #fff;
+
   font-size: 12px;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 20px;
+
   font-weight: 600;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 /* IMAGE */
 .step img {
   width: 100%;
-  height: 130px;
+  height: 140px;
   object-fit: contain;
+  transition: transform 0.4s ease;
 }
 
 /* TEXT */
 .step h3 {
-  font-size: 16px;
-  margin: 10px 0 5px;
-  color: #111827;
+  font-size: 17px;
+  margin: 12px 0 6px;
+  color: #0f172a;
 }
 
 .step p {
-  font-size: 13px;
-  color: #6b7280;
+  font-size: 14px;
+  color: #64748b;
 }
+
 
 /* HOVER */
 .step:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+}
+
+.step:hover img {
+  transform: scale(1.1);
 }
 
 .step:hover .step-number {

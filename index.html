@@ -78,7 +78,8 @@
       </p>
 
       <div class="hero-buttons">
-        <button class="btn-red" id="openDemo" aria-label="Book Free Demo">
+        <!-- id="openDemo" -->
+        <button class="btn-red" onclick="scrollToForm()" aria-label="Book Free Demo">
           <i class="fa-solid fa-graduation-cap"></i>
           Book Free Demo
         </button>
@@ -113,7 +114,7 @@
     </div>
 
     <!-- DEMO MODAL -->
-    <div class="demo-modal" id="demoModal" role="dialog" aria-labelledby="demoTitle">
+    <!-- <div class="demo-modal" id="demoModal" role="dialog" aria-labelledby="demoTitle">
       <div class="modal-box">
         <button class="close-btn" id="closeDemo" aria-label="Close modal">
           ✕
@@ -129,20 +130,20 @@
             <p>Schedule a free demo session and get course brochure</p>
 
             <form id="demoForm" autocomplete="off">
-              <!-- NAME -->
+              
               <div class="input-field">
                 <i class="fa-solid fa-user"></i>
                 <input type="text" id="name" name="name" placeholder="Full Name" required />
               </div>
 
-              <!-- MOBILE -->
+              
               <div class="input-field">
                 <i class="fa-solid fa-phone"></i>
                 <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" maxlength="10"
                   pattern="[0-9]{10}" required />
               </div>
 
-              <!-- CLASS -->
+              
               <div class="input-field">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <select id="class" name="class" required title="Select Class">
@@ -158,7 +159,7 @@
                 </select>
               </div>
 
-              <!-- EMAIL + OTP -->
+             
               <div class="input-field email-field">
                 <i class="fa-solid fa-envelope"></i>
                 <input type="email" id="email" name="email" placeholder="Email Address" required />
@@ -167,7 +168,7 @@
                 </button>
               </div>
 
-              <!-- OTP -->
+              
               <div class="input-field" id="otpBox" style="display: none">
                 <i class="fa-solid fa-key"></i>
                 <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" />
@@ -178,7 +179,7 @@
                 <button type="button" id="resendOtpBtn">Resend</button>
               </div>
 
-              <!-- SUBMIT -->
+              
               <button type="submit" id="submitBtn" class="submit-btn" disabled>
                 Submit
               </button>
@@ -186,7 +187,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- ADMISSION FORM -->
     <div class="premium-admission-form" id="admission">
@@ -209,7 +210,7 @@
 
       <!-- ================= HEADER ================= -->
       <div class="form-top">
-        <h3>🎯 Free Demo + Admission 2026</h3>
+        <h3>🎯 Free Demo + Admission 2026 - 2027</h3>
         <p>Scholarship Test Available</p>
       </div>
 
@@ -218,7 +219,7 @@
       <!-- ================= TRUST ================= -->
       <div class="trust-box">
         <span>✅ 100+ Students</span>
-        <span>⭐ 3.9 Rating</span>
+        <span>⭐ 4.5 Rating</span>
         <span>🏆 10+ Years</span>
       </div>
 
@@ -1275,7 +1276,7 @@
         <div class="faculty-track" id="facultyTrack">
           <!-- 1. Mrs. Riddhi Mewada -->
           <div class="faculty-card">
-            <img src="images/RiddhiMewada.jpg" alt="Mrs. Riddhi Mewada" />
+            <img src="images/RiddhiMewada.png" alt="Mrs. Riddhi Mewada" />
             <h3>Mrs. Riddhi Mewada</h3>
             <span class="subject">Mathematics Faculty</span>
             <ul class="faculty-highlights">
@@ -1296,7 +1297,7 @@
 
           <!-- 2. Mrs. Amruta Dudhe -->
           <div class="faculty-card">
-            <img src="images/AmrutaDudhe.jpg" alt="Mrs. Amruta Dudhe" />
+            <img src="images/AmrutaDudhe.png" alt="Mrs. Amruta Dudhe" />
             <h3>Mrs. Amruta Dudhe</h3>
             <span class="subject">Marathi Faculty</span>
             <ul class="faculty-highlights">
@@ -1316,7 +1317,7 @@
 
           <!-- 3. Mr. Rohit Sharma -->
           <div class="faculty-card">
-            <img src="images/RohitSharma.jpg" alt="Mr. Rohit Sharma" />
+            <img src="images/RohitSharma.png" alt="Mr. Rohit Sharma" />
             <h3>Mr. Rohit Sharma</h3>
             <span class="subject">Mathematics Faculty</span>
             <ul class="faculty-highlights">
@@ -1336,7 +1337,7 @@
 
           <!-- 4. Mr. Akash Jha -->
           <div class="faculty-card">
-            <img src="images/AkashJha.jpg" alt="Mr. Akash Jha" />
+            <img src="images/AkashJha.png" alt="Mr. Akash Jha" />
             <h3>Mr. Akash Jha</h3>
             <span class="subject">English Faculty</span>
             <ul class="faculty-highlights">
@@ -1357,7 +1358,7 @@
 
           <!-- 5. Mr. Ritik Dubey -->
           <div class="faculty-card">
-            <img src="images/RitikDubey.jpg" alt="Mr. Ritik Dubey" />
+            <img src="images/RitikDubey.png" alt="Mr. Ritik Dubey" />
             <h3>Mr. Ritik Dubey</h3>
             <span class="subject">Commerce Faculty</span>
             <ul class="faculty-highlights">
@@ -1377,7 +1378,7 @@
 
           <!-- 6. Mr. Suyash Amberkar -->
           <div class="faculty-card">
-            <img src="images/SuyashAmberkar.jpg" alt="Mr. Suyash Amberkar" />
+            <img src="images/SuyashAmberkar.png" alt="Mr. Suyash Amberkar" />
             <h3>Mr. Suyash Amberkar</h3>
             <span class="subject">Mathematics Faculty</span>
             <ul class="faculty-highlights">
@@ -1394,7 +1395,7 @@
 
           <!-- 7. Mrs. Sheelangi Bhise -->
           <div class="faculty-card">
-            <img src="images/SheelangiBhise.jpg" alt="Mrs. Sheelangi Bhise" />
+            <img src="images/SheelangiBhise.png" alt="Mrs. Sheelangi Bhise" />
             <h3>Mrs. Sheelangi Bhise</h3>
             <span class="subject">Hindi Faculty</span>
             <ul class="faculty-highlights">
@@ -1413,7 +1414,7 @@
 
           <!-- 8. Mr. Ajit Pandey -->
           <div class="faculty-card">
-            <img src="images/AjitPandey.jpg" alt="Mr. Ajit Pandey" />
+            <img src="images/AjitPandey.png" alt="Mr. Ajit Pandey" />
             <h3>Mr. Ajit Pandey</h3>
             <span class="subject">Science Faculty</span>
             <ul class="faculty-highlights">
@@ -1894,7 +1895,7 @@
           Educare Academy
         </h3>
         <p>
-          Mumbai’s trusted coaching for Classes 7–12.<br />
+          Mumbai’s trusted coaching for Classes 5–12.<br />
           Personalized guidance, expert faculty, weekly tests, and proven
           board results.
         </p>
@@ -1922,6 +1923,9 @@
           </li>
           <li>
             <a href="#faculty"><i class="fa-solid fa-circle-arrow-right"></i> Faculty</a>
+          </li>
+          <li>
+            <a href="#gallery"><i class="fa-solid fa-circle-arrow-right"></i> Gallery</a>
           </li>
           <li>
             <a href="#faq"><i class="fa-solid fa-circle-arrow-right"></i> FAQ</a>
@@ -2002,12 +2006,12 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script src="js/disable.js"></script>
+  <!-- <script src="js/disable.js"></script> -->
   <script src="js/rocket.js"></script>
   <script src="js/STATS SECTION.js"></script>
   <script src="js/student.js"></script>
-  <script src="js/email.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- <script src="js/email.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
   <script src="js/admission.js" defer></script>
   <script src="js/topachievers.js"></script>
 

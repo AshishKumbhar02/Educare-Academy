@@ -251,7 +251,6 @@
   transition: 0.3s;
 }
 
-
 /* TEXT */
 .faq-contact-box-inner h3 {
   font-size: 28px;
@@ -308,12 +307,4 @@
 
 .call-btn:hover {
   background: #e2e8f0;
-}
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media (max-width: 768px) {
-  
 }
