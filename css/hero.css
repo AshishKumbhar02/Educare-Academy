@@ -2,9 +2,18 @@
 .hero {
   position: relative;
 
-  background: linear-gradient(-45deg, #667eea, #764ba2, #6a5acd, #00c6ff);
+  background: linear-gradient(
+    -45deg,
+    #ff6a00,   /* orange */
+    #ff3cac,   /* pink */
+    #784ba0,   /* purple */
+    #2b86c5,   /* blue */
+    #00c9a7,   /* teal */
+    #f9d423    /* yellow */
+  );
+
   background-size: 400% 400%;
-  animation: gradientMove 10s ease infinite;
+  animation: rainbowMove 10s ease infinite;
 
   min-height: 100vh;
 
@@ -15,25 +24,19 @@
 
   text-align: center;
   color: white;
-  padding: 40px 20px;
+  padding: 10px;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Animation */
+@keyframes rainbowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .hero-content {

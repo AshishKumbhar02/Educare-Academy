@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const phone = document.getElementById("phone").value;
       const studentClass = document.getElementById("studentClass").value;
       const school = document.getElementById("school").value;
-      const city = document.getElementById("city").value;
 
       // ================= WHATSAPP =================
       const whatsappNumber = "917045529450"; // 👈 CHANGE THIS
@@ -94,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
       • Phone: ${phone}
       • Class: ${studentClass}
       • School: ${school || "-"}
-      • City: ${city || "-"}
       
       Please respond to this enquiry.`;
 
