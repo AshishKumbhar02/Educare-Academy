@@ -1,12 +1,10 @@
 /* HERO SECTION */
 .hero {
   position: relative;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/classroom.png") no-repeat center center;
 
-  background-size: cover; /* Image full screen cover kare */
-  background-repeat: no-repeat;
+  background: linear-gradient(-45deg, #667eea, #764ba2, #6a5acd, #00c6ff);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
 
   min-height: 100vh;
 
@@ -18,6 +16,18 @@
   text-align: center;
   color: white;
   padding: 40px 20px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .overlay {
@@ -226,46 +236,6 @@ label i {
   margin-right: 8px;
 }
 
-.email-box {
-  position: relative;
-}
-
-.email-box button {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  height: 38px;
-  padding: 0 12px;
-  border: none;
-  background: #ff3c3c;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.email-box button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-/* OTP buttons */
-.otp-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.otp-actions button {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  background: #333;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
 /* INPUT FIELD */
 .input-field {
   position: relative;
@@ -299,49 +269,6 @@ label i {
   box-shadow: 0 0 6px rgba(106, 90, 205, 0.2);
 }
 
-#otpBtn {
-  position: absolute;
-  right: 6px;
-  top: 6px;
-  padding: 6px 10px;
-  font-size: 12px;
-  background: #6a5acd;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#otpSection,
-#verifySection {
-  display: none;
-  grid-column: span 2;
-}
-
-/* EMAIL BUTTON INSIDE */
-.email-field {
-  position: relative;
-}
-
-.email-field button {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  height: 34px;
-  padding: 0 12px;
-  border: none;
-  background: #111;
-  color: #fff;
-  border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.email-field button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
 
 .trust-box {
   display: flex;
@@ -353,18 +280,6 @@ label i {
   color: #444;
   margin-bottom: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.whatsapp-btn {
-  display: block;
-  text-align: center;
-  margin-top: 15px;
-  padding: 12px;
-  background: #25d366;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .submit-btn {
@@ -491,41 +406,6 @@ label i {
   }
 }
 
-/* MOBILE FIELD BUTTON */
-.mobile-field {
-  position: relative;
-}
-
-.mobile-field input {
-  padding-right: 110px;
-}
-
-.otp-btn {
-  position: absolute;
-  right: 6px;
-  top: 6px;
-  height: 32px;
-  padding: 0 12px;
-  background: #ff3c3c;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.masked-text {
-  display: none;
-  grid-column: span 2;
-  text-align: center;
-  font-size: 13px;
-  color: #444;
-  background: #f1f1f1;
-  padding: 8px;
-  border-radius: 8px;
-}
-
 #add_submitBtn {
   width: 100%;
   margin-top: 15px;
@@ -537,11 +417,64 @@ label i {
   color: white;
   font-size: 16px;
   font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
+/* Icon */
+#add_submitBtn i {
+  font-size: 16px;
+}
+
+/* Hover */
 #add_submitBtn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(106, 90, 205, 0.3);
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(106, 90, 205, 0.4);
+}
+
+/* Disabled */
+#add_submitBtn:disabled {
+  background: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Loader */
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  display: none;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#successMsg {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+  color: #00ffae;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

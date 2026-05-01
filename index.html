@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Educare Academy</title>
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/hero.css" />
@@ -113,82 +113,6 @@
       </div>
     </div>
 
-    <!-- DEMO MODAL -->
-    <!-- <div class="demo-modal" id="demoModal" role="dialog" aria-labelledby="demoTitle">
-      <div class="modal-box">
-        <button class="close-btn" id="closeDemo" aria-label="Close modal">
-          ✕
-        </button>
-
-        <div class="modal-content">
-          <div class="modal-image">
-            <img src="images/demo.png" alt="Demo Class Preview" />
-          </div>
-
-          <div class="modal-form">
-            <h2 id="demoTitle">Book Your Demo</h2>
-            <p>Schedule a free demo session and get course brochure</p>
-
-            <form id="demoForm" autocomplete="off">
-              
-              <div class="input-field">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" id="name" name="name" placeholder="Full Name" required />
-              </div>
-
-              
-              <div class="input-field">
-                <i class="fa-solid fa-phone"></i>
-                <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" maxlength="10"
-                  pattern="[0-9]{10}" required />
-              </div>
-
-              
-              <div class="input-field">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <select id="class" name="class" required title="Select Class">
-                  <option value="">Select Class</option>
-                  <option value="5">5th</option>
-                  <option value="6">6th</option>
-                  <option value="7">7th</option>
-                  <option value="8">8th</option>
-                  <option value="9">9th</option>
-                  <option value="10">10th</option>
-                  <option value="11">11th</option>
-                  <option value="12">12th</option>
-                </select>
-              </div>
-
-             
-              <div class="input-field email-field">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" id="email" name="email" placeholder="Email Address" required />
-                <button type="button" id="sendOtpBtn" disabled>
-                  Send OTP
-                </button>
-              </div>
-
-              
-              <div class="input-field" id="otpBox" style="display: none">
-                <i class="fa-solid fa-key"></i>
-                <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" />
-              </div>
-
-              <div class="otp-actions" id="otpActions" style="display: none">
-                <button type="button" id="verifyOtpBtn">Verify</button>
-                <button type="button" id="resendOtpBtn">Resend</button>
-              </div>
-
-              
-              <button type="submit" id="submitBtn" class="submit-btn" disabled>
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <!-- ADMISSION FORM -->
     <div class="premium-admission-form" id="admission">
       <!-- ================= BANNER ================= -->
@@ -226,51 +150,23 @@
       <!-- ================= FORM ================= -->
       <form id="admissionForm">
         <div class="form-grid">
+
           <!-- NAME -->
           <div class="input-field">
             <i class="fa fa-user"></i>
-            <input type="text" id="add_name" placeholder="Full Name" required />
+            <input type="text" id="name" placeholder="Full Name" required />
           </div>
 
-          <!-- EMAIL -->
+          <!-- MOBILE -->
           <div class="input-field">
-            <i class="fa fa-envelope"></i>
-            <input type="email" id="add_email" placeholder="Email Address" required />
-          </div>
-
-          <!-- MOBILE + OTP BUTTON -->
-          <div class="input-field mobile-field">
             <i class="fa fa-phone"></i>
             <input type="tel" id="phone" placeholder="Mobile Number" maxlength="10" required />
-            <button type="button" id="otpBtn" onclick="sendOTP()" style="display: none">
-              Send OTP
-            </button>
-          </div>
-
-          <!-- CITY -->
-          <div class="input-field">
-            <i class="fa fa-location-dot"></i>
-            <input type="text" id="add_city" placeholder="City" />
-          </div>
-
-          <!-- MASKED NUMBER -->
-          <p id="showNumber" class="masked-text"></p>
-
-          <!-- OTP INPUT (HIDDEN FIRST) -->
-          <div class="input-field full" id="otpSection" style="display: none">
-            <i class="fa fa-lock"></i>
-            <input type="text" id="add_otp" placeholder="Enter OTP" />
-          </div>
-
-          <!-- VERIFY BUTTON (HIDDEN FIRST) -->
-          <div class="otp-actions full" id="verifySection" style="display: none">
-            <button type="button" onclick="verifyOTP()">Verify OTP</button>
           </div>
 
           <!-- CLASS -->
           <div class="input-field">
             <i class="fa fa-graduation-cap"></i>
-            <select id="add_class" required title="Select Class">
+            <select id="studentClass" required>
               <option value="">Select Class</option>
               <option>5th</option>
               <option>6th</option>
@@ -286,20 +182,27 @@
           <!-- SCHOOL -->
           <div class="input-field">
             <i class="fa fa-school"></i>
-            <input type="text" id="add_school" placeholder="School Name" />
+            <input type="text" id="school" placeholder="School Name" />
           </div>
+
+          <!-- CITY -->
+          <div class="input-field">
+            <i class="fa fa-location-dot"></i>
+            <input type="text" id="city" placeholder="City" />
+          </div>
+
         </div>
 
         <!-- SUBMIT -->
         <button type="submit" id="add_submitBtn" disabled>
-          🚀 Book Free Demo
+          <i class="fa-solid fa-paper-plane"></i>
+          <span class="btn-text">Book Free Demo</span>
+          <span class="loader"></span>
         </button>
-      </form>
 
-      <!-- ================= WHATSAPP ================= -->
-      <a class="whatsapp-btn" href="https://wa.me/917045529450">
-        💬 Chat on WhatsApp
-      </a>
+        <!-- SUCCESS MESSAGE -->
+        <p id="successMsg">✅ Form Submitted Successfully!</p>
+      </form>
     </div>
   </section>
 
@@ -2006,12 +1909,9 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script src="js/disable.js"></script>
+  <!-- <script src="js/disable.js"></script> -->
   <script src="js/rocket.js"></script>
-  <script src="js/STATS SECTION.js"></script>
   <script src="js/student.js"></script>
-  <!-- <script src="js/email.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
   <script src="js/admission.js" defer></script>
   <script src="js/topachievers.js"></script>
 

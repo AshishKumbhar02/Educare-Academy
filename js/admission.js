@@ -13,79 +13,119 @@ document.addEventListener("DOMContentLoaded", function () {
     "images/class12science.png",
   ];
 
-  let i = 0;
+  let index = 0;
   const img = document.getElementById("festivalImg");
 
-  window.nextSlide = function () {
-    i = (i + 1) % images.length;
-    img.src = images[i];
-  };
+  if (img) {
+    window.nextSlide = function () {
+      index = (index + 1) % images.length;
+      img.src = images[index];
+    };
 
-  window.prevSlide = function () {
-    i = (i - 1 + images.length) % images.length;
-    img.src = images[i];
-  };
+    window.prevSlide = function () {
+      index = (index - 1 + images.length) % images.length;
+      img.src = images[index];
+    };
+  }
 
   // ================= POPUP =================
   const popup = document.getElementById("imagePopup");
   const popupImg = document.getElementById("popupImg");
+  const closeBtn = document.querySelector(".close-popup");
 
-  img.onclick = () => {
-    popup.style.display = "block";
-    popupImg.src = img.src;
-  };
+  if (img && popup && popupImg) {
+    img.addEventListener("click", () => {
+      popup.style.display = "block";
+      popupImg.src = img.src;
+    });
+  }
 
-  document.querySelector(".close-popup").onclick = () => {
-    popup.style.display = "none";
-  };
+  if (closeBtn && popup) {
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  }
 
-  // ================= OTP =================
-  let otp = "";
-
-  const phone = document.getElementById("phone");
-  const otpBtn = document.getElementById("otpBtn");
+  // ================= FORM =================
+  const form = document.getElementById("admissionForm");
   const submitBtn = document.getElementById("add_submitBtn");
+  const successMsg = document.getElementById("successMsg");
 
-  phone.addEventListener("input", () => {
-    phone.value = phone.value.replace(/\D/g, "");
+  if (form && submitBtn) {
+    // ================= VALIDATION =================
+    form.addEventListener("input", () => {
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const studentClass = document.getElementById("studentClass").value;
 
-    if (phone.value.length === 10) {
-      otpBtn.style.display = "block";
-    } else {
-      otpBtn.style.display = "none";
-    }
-  });
+      const isValidPhone = /^[0-9]{10}$/.test(phone);
 
-  window.sendOTP = function () {
-    otp = Math.floor(1000 + Math.random() * 9000);
-    alert("OTP: " + otp);
+      submitBtn.disabled = !(name && isValidPhone && studentClass);
+    });
 
-    document.getElementById("otpSection").style.display = "block";
-    document.getElementById("verifySection").style.display = "block";
+    // ================= SUBMIT =================
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    document.getElementById("showNumber").style.display = "block";
-    document.getElementById("showNumber").innerText =
-      "Sent to ******" + phone.value.slice(6);
-  };
+      const loader = submitBtn.querySelector(".loader");
+      const text = submitBtn.querySelector(".btn-text");
 
-  window.verifyOTP = function () {
-    const userOTP = document.getElementById("add_otp").value;
+      // Show loader
+      if (loader && text) {
+        loader.style.display = "inline-block";
+        text.textContent = "Submitting...";
+      }
 
-    if (userOTP == otp) {
-      alert("OTP Verified");
-      submitBtn.disabled = false;
-    } else {
-      alert("Wrong OTP");
-    }
-  };
+      submitBtn.disabled = true;
 
-  // ================= SUBMIT =================
-  document.getElementById("admissionForm").addEventListener("submit", (e) => {
-    e.preventDefault();
+      // ================= GET FORM DATA =================
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const studentClass = document.getElementById("studentClass").value;
+      const school = document.getElementById("school").value;
+      const city = document.getElementById("city").value;
 
-    alert("Form Submitted Successfully!");
+      // ================= WHATSAPP =================
+      const whatsappNumber = "917045529450"; // 👈 CHANGE THIS
 
-    e.target.reset();
-    submitBtn.disabled = true;
-  });
+      const message = `*New Admission Enquiry*
+      
+      • Name: ${name}
+      • Phone: ${phone}
+      • Class: ${studentClass}
+      • School: ${school || "-"}
+      • City: ${city || "-"}
+      
+      Please respond to this enquiry.`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Fake delay for better UX
+      setTimeout(() => {
+        // Hide loader
+        if (loader && text) {
+          loader.style.display = "none";
+          text.textContent = "Book Free Demo";
+        }
+
+        // Show success message
+        if (successMsg) {
+          successMsg.style.display = "block";
+        }
+
+        // Open WhatsApp
+        window.open(url, "_blank");
+
+        // Reset form
+        form.reset();
+        submitBtn.disabled = true;
+
+        // Hide success after 3 sec
+        setTimeout(() => {
+          if (successMsg) successMsg.style.display = "none";
+        }, 3000);
+      }, 1500);
+    });
+  }
 });
