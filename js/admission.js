@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const school = document.getElementById("school").value;
 
       // ================= WHATSAPP =================
-      const whatsappNumber = "917045529450"; // 👈 CHANGE THIS
+      const whatsappNumber = "917303418968"; // 👈 CHANGE THIS
 
       const message = `*New Admission Enquiry*
       
