@@ -492,3 +492,125 @@
     height: 120px;
   }
 }
+
+/* Wrapper */
+.paper-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+/* Card */
+.paper-card {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+}
+
+/* Image */
+.paper-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Caption */
+.paper-caption {
+  padding: 16px 14px;
+  text-align: center;
+  background: #fafafa;
+}
+
+/* Top Text */
+.download-text {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Button */
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff2d2d, #ff6a00);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+@media (hover: hover) {
+  .paper-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .paper-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .paper-card:hover .download-btn {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .paper-card-wrapper {
+    padding: 25px 10px;
+  }
+
+  .paper-card {
+    max-width: 92%;
+    border-radius: 14px;
+  }
+
+  .paper-caption {
+    padding: 12px;
+  }
+
+  .download-text {
+    font-size: 13px;
+  }
+
+  .download-btn {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+}
+
+/* 📲 Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .paper-card {
+    max-width: 360px;
+  }
+}
+
+/* 💻 Large Screen */
+@media (min-width: 1200px) {
+  .paper-card {
+    max-width: 460px;
+  }
+
+  .download-text {
+    font-size: 15px;
+  }
+
+  .download-btn {
+    font-size: 14px;
+  }
+}
