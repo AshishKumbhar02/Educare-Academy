@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educare Academy</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6fb;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 45px;
+            margin-right: 10px;
+        }
+
+        .logo-text h2 {
+            font-size: 18px;
+            color: #1e3a8a;
+        }
+
+        .logo-text span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4f46e5;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(120deg, #4f46e5, #6366f1);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* LAYOUT */
+        .container {
+            display: flex;
+            padding: 30px;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 260px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .sidebar button {
+            width: 100%;
+            padding: 12px;
+            margin: 6px 0;
+            border: none;
+            border-radius: 8px;
+            background: #eef2ff;
+            cursor: pointer;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .sidebar button i {
+            margin-right: 8px;
+        }
+
+        .sidebar button:hover,
+        .sidebar button.active {
+            background: #4f46e5;
+            color: white;
+        }
+
+        /* CONTENT */
+        .content {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        /* CARD */
+        .paper-box {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        /* TITLE */
+        .title {
+            font-size: 32px;
+            color: #ef4444;
+        }
+
+        /* YEAR */
+        .year {
+            margin-top: 25px;
+        }
+
+        .year h2 {
+            color: #1e3a8a;
+        }
+
+        /* LINKS */
+        .links {
+            margin-top: 10px;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 6px;
+            padding: 10px 16px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #4f46e5, #6366f1);
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .content {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png">
+            <div class="logo-text">
+                <h2>Educare Academy</h2>
+                <span>Be Educated, Become Successful</span>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="#"><i class="fa fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-book"></i> Papers</a>
+            <a href="#"><i class="fa fa-phone"></i> Contact</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h1>SSC 10th Board Exam Papers</h1>
+        <p>Download Previous Year Papers with Solutions</p>
+    </div>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h3>Subjects</h3>
+
+            <button onclick="loadData('Algebra')" class="active"><i class="fa fa-calculator"></i> MATHEMATICS - I
+                (ALGEBRA)</button>
+            <button onclick="loadData('Geometry')"><i class="fa fa-shapes"></i> MATHEMATICS - II (GEOMETRY)</button>
+            <button onclick="loadData('Science I')"><i class="fa fa-flask"></i> SCIENCE - I</button>
+            <button onclick="loadData('Science II')"><i class="fa fa-atom"></i> SCIENCE - II</button>
+            <button onclick="loadData('History')"><i class="fa fa-landmark"></i> SOCIAL SCIENCES - I (HISTORY &
+                POL.SC.)</button>
+            <button onclick="loadData('Geography')"><i class="fa fa-globe"></i> SOCIAL SCIENCES - II
+                (GEOGRAPHY)</button>
+            <button onclick="loadData('English')"><i class="fa fa-book"></i> ENGLISH</button>
+            <button onclick="loadData('Marathi')"><i class="fa fa-language"></i> MARATHI</button>
+            <button onclick="loadData('Hindi')"><i class="fa fa-language"></i> HINDI</button>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="paper-box" id="paperBox"></div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Educare Academy | Designed for Students 📘
+    </div>
+
+    <script>
+
+        const papers = {
+            "Algebra": {
+                2025: [
+                    { name: "ALG MAR 2025 QP", file: "pdf/algebra-mar-2025-qp.pdf" },
+                    { name: "ALG JULY 2025 QP", file: "pdf/algebra-jul-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "ALG JULY 2024 QP", file: "pdf/algebra-jul-2024-qp.pdf" },
+                    { name: "ALG MAR 2024 QP", file: "pdf/algebra-mar-2024-qp.pdf" },
+                    { name: "ALG MAR 2024 AP", file: "pdf/algebra-mar-2024-ap.pdf" }
+                ],
+
+                2023: [
+                    { name: "ALG JULY 2023 QP", file: "pdf/algebra-july-2023-qp.pdf" },
+                    { name: "ALG JULY 2023 AP", file: "pdf/algebra-july-2023-ap.pdf" },
+                    { name: "ALG MAR 2023 QP", file: "pdf/algebra-mar-2023-qp.pdf" },
+                    { name: "ALG MAR 2023 AP", file: "pdf/algebra-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "ALG AUG 2022 QP", file: "pdf/algebra-aug-2022-qp.pdf" },
+                    { name: "ALG AUG 2022 AP", file: "pdf/algebra-aug-2022-ap.pdf" },
+                    { name: "ALG MAR 2022 QP", file: "pdf/algebra-mar-2022-qp.pdf" },
+                    { name: "ALG MAR 2022 AP", file: "pdf/algebra-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "ALG NOV 2021 QP", file: "pdf/algebra-nov-2021-qp.pdf" },
+                    { name: "ALG NOV 2021 AP", file: "pdf/algebra-nov-2021-ap.pdf" },
+                    { name: "ALG MAR 2021 QP", file: "pdf/algebra-mar-2021-qp.pdf" },
+                    { name: "ALG MAR 2021 AP", file: "pdf/algebra-mar-2021-ap.pdf" }
+                ]
+            },
+            "English": {
+                2025: [
+                    { name: "ENG MARCH 2025 QP", file: "pdf/eng-mar-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "ENG JUL 2024 QP", file: "pdf/eng-jul-2024-qp.pdf" },
+                    { name: "ENG MARCH 2024 AP", file: "pdf/eng-mar-2024-ap.pdf" }
+                ],
+
+                2023: [
+                    { name: "ENG JUL 2023 QP", file: "pdf/eng-jul-2023-qp.pdf" },
+                    { name: "ENG JUL 2023 AP", file: "pdf/eng-jul-2023-ap.pdf" },
+                    { name: "ENG MAR 2023 QP", file: "pdf/eng-mar-2023-qp.pdf" },
+                    { name: "ENG MAR 2023 AP", file: "pdf/eng-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "ENG AUG 2022 QP", file: "pdf/eng-aug-2022-qp.pdf" },
+                    { name: "ENG AUG 2022 AP", file: "pdf/eng-aug-2022-ap.pdf" },
+                    { name: "ENG MAR 2022 QP", file: "pdf/eng-mar-2022-qp.pdf" },
+                    { name: "ENG MAR 2022 AP", file: "pdf/eng-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "ENG DEC 2021 QP", file: "pdf/eng-dec-2021-qp.pdf" },
+                    { name: "ENG DEC 2021 AP", file: "pdf/eng-dec-2021-ap.pdf" },
+                    { name: "ENG MARCH 2021 QP", file: "pdf/eng-mar-2021-qp.pdf" },
+                    { name: "ENG MARCH 2021 AP", file: "pdf/eng-mar-2021-ap.pdf" }
+                ]
+            },
+
+            "Geography": {
+                2025: [
+                    { name: "GEOG MAR 2025 QP", file: "pdf/geog-mar-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "GEOG MAR 2024 QP", file: "pdf/geog-mar-2024-qp.pdf" },
+                    { name: "GEOG MAR 2024 AP", file: "pdf/geog-mar-2024-ap.pdf" }
+                ],
+
+                2023: [
+                    { name: "GEOG JUL 2023 QP", file: "pdf/geog-jul-2023-qp.pdf" },
+                    { name: "GEOG JUL 2023 AP", file: "pdf/geog-jul-2023-ap.pdf" },
+                    { name: "GEOG MAR 2023 QP", file: "pdf/geog-mar-2023-qp.pdf" },
+                    { name: "GEOG MAR 2023 AP", file: "pdf/geog-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "GEOG AUG 2022 QP", file: "pdf/geog-aug-2022-qp.pdf" },
+                    { name: "GEOG AUG 2022 AP", file: "pdf/geog-aug-2022-ap.pdf" },
+                    { name: "GEOG MAR 2022 QP", file: "pdf/geog-mar-2022-qp.pdf" },
+                    { name: "GEOG MAR 2022 AP", file: "pdf/geog-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "GEOG DEC 2021 QP", file: "pdf/geog-dec-2021-qp.pdf" },
+                    { name: "GEOG DEC 2021 AP", file: "pdf/geog-dec-2021-ap.pdf" }
+                ]
+            },
+
+
+            "Marathi": {
+                2025: [
+                    { name: "MARATHI JULY 2025 QP", file: "pdf/marathi-july-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "MARATHI JULY 2024 QP", file: "pdf/marathi-july-2024-qp.pdf" }
+                ],
+
+                2023: [
+                    { name: "MARATHI JULY 2023 QP", file: "pdf/marathi-july-2023-qp.pdf" },
+                    { name: "MARATHI JULY 2023 AP", file: "pdf/marathi-july-2023-ap.pdf" },
+                    { name: "MARATHI MAR 2023 QP", file: "pdf/marathi-mar-2023-qp.pdf" },
+                    { name: "MARATHI MAR 2023 AP", file: "pdf/marathi-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "MARATHI JULY 2022 QP", file: "pdf/marathi-july-2022-qp.pdf" },
+                    { name: "MARATHI JULY 2022 AP", file: "pdf/marathi-july-2022-ap.pdf" },
+                    { name: "MARATHI MAR 2022 QP", file: "pdf/marathi-mar-2022-qp.pdf" },
+                    { name: "MARATHI MAR 2022 AP", file: "pdf/marathi-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "MARATHI NOV 2021 QP", file: "pdf/marathi-nov-2021-qp.pdf" },
+                    { name: "MARATHI NOV 2021 AP", file: "pdf/marathi-nov-2021-ap.pdf" },
+                    { name: "MARATHI MAR 2021 QP", file: "pdf/marathi-mar-2021-qp.pdf" },
+                    { name: "MARATHI MAR 2021 AP", file: "pdf/marathi-mar-2021-ap.pdf" }
+                ]
+            },
+
+            "Hindi": {
+                2025: [
+                    { name: "HINDI JULY 2025 QP", file: "pdf/hindi-july-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "HINDI JULY 2024 QP", file: "pdf/hindi-july-2024-qp.pdf" }
+                ],
+
+                2023: [
+                    { name: "HINDI JULY 2023 QP", file: "pdf/hindi-july-2023-qp.pdf" },
+                    { name: "HINDI JULY 2023 AP", file: "pdf/hindi-july-2023-ap.pdf" },
+                    { name: "HINDI MAR 2023 QP", file: "pdf/hindi-mar-2023-qp.pdf" },
+                    { name: "HINDI MAR 2023 AP", file: "pdf/hindi-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "HINDI JULY 2022 QP", file: "pdf/hindi-july-2022-qp.pdf" },
+                    { name: "HINDI JULY 2022 AP", file: "pdf/hindi-july-2022-ap.pdf" },
+                    { name: "HINDI MAR 2022 QP", file: "pdf/hindi-mar-2022-qp.pdf" },
+                    { name: "HINDI MAR 2022 AP", file: "pdf/hindi-mar-2022-ap.pdf" }
+                ],
+
+                2020: [
+                    { name: "HINDI NOV 2020 QP", file: "pdf/hindi-nov-2020-qp.pdf" },
+                    { name: "HINDI NOV 2020 AP", file: "pdf/hindi-nov-2020-ap.pdf" },
+                    { name: "HINDI MAR 2020 QP", file: "pdf/hindi-mar-2020-qp.pdf" },
+                    { name: "HINDI MAR 2020 AP", file: "pdf/hindi-mar-2020-ap.pdf" }
+                ]
+            },
+
+            "Geometry": {
+                2025: [
+                    { name: "GEOM MAR 2025 QP", file: "pdf/geom-mar-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "GEOM MAR 2024 QP", file: "pdf/geom-mar-2024-qp.pdf" },
+                    { name: "GEOM MAR 2024 AP", file: "pdf/geom-mar-2024-ap.pdf" }
+                ],
+
+                2023: [
+                    { name: "GEOM JUL 2023 QP", file: "pdf/geom-jul-2023-qp.pdf" },
+                    { name: "GEOM JUL 2023 AP", file: "pdf/geom-jul-2023-ap.pdf" },
+                    { name: "GEOM MAR 2023 QP", file: "pdf/geom-mar-2023-qp.pdf" },
+                    { name: "GEOM MAR 2023 AP", file: "pdf/geom-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "GEOM AUG 2022 QP", file: "pdf/geom-aug-2022-qp.pdf" },
+                    { name: "GEOM AUG 2022 AP", file: "pdf/geom-aug-2022-ap.pdf" },
+                    { name: "GEOM MAR 2022 QP", file: "pdf/geom-mar-2022-qp.pdf" },
+                    { name: "GEOM MAR 2022 AP", file: "pdf/geom-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "GEOM NOV 2021 QP", file: "pdf/geom-nov-2021-qp.pdf" },
+                    { name: "GEOM NOV 2021 AP", file: "pdf/geom-nov-2021-ap.pdf" },
+                    { name: "GEOM MAR 2021 QP", file: "pdf/geom-mar-2021-qp.pdf" },
+                    { name: "GEOM MAR 2021 AP", file: "pdf/geom-mar-2021-ap.pdf" }
+                ]
+            },
+
+            "Science I": {
+                2025: [
+                    { name: "SCI 1 MAR 2025 QP", file: "pdf/sci1-mar-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "SCI 1 MAR 2024 QP", file: "pdf/sci1-mar-2024-qp.pdf" }
+                ],
+
+                2023: [
+                    { name: "SCI 1 JUL 2023 QP", file: "pdf/sci1-jul-2023-qp.pdf" },
+                    { name: "SCI 1 JUL 2023 AP", file: "pdf/sci1-jul-2023-ap.pdf" },
+                    { name: "SCI 1 MAR 2023 QP", file: "pdf/sci1-mar-2023-qp.pdf" },
+                    { name: "SCI 1 MAR 2023 AP", file: "pdf/sci1-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "SCI 1 AUG 2022 QP", file: "pdf/sci1-aug-2022-qp.pdf" },
+                    { name: "SCI 1 AUG 2022 AP", file: "pdf/sci1-aug-2022-ap.pdf" },
+                    { name: "SCI 1 MAR 2022 QP", file: "pdf/sci1-mar-2022-qp.pdf" },
+                    { name: "SCI 1 MAR 2022 AP", file: "pdf/sci1-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "SCI 1 DEC 2021 QP", file: "pdf/sci1-dec-2021-qp.pdf" },
+                    { name: "SCI 1 DEC 2021 AP", file: "pdf/sci1-dec-2021-ap.pdf" },
+                    { name: "SCI 1 MAR 2021 QP", file: "pdf/sci1-mar-2021-qp.pdf" },
+                    { name: "SCI 1 MAR 2021 AP", file: "pdf/sci1-mar-2021-ap.pdf" }
+                ]
+            },
+
+
+            "Science II": {
+                2025: [
+                    { name: "SCI 2 MAR 2025 QP", file: "pdf/sci2-mar-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "SCI 2 MAR 2024 QP", file: "pdf/sci2-mar-2024-qp.pdf" },
+                    { name: "SCI 2 MAR 2024 AP", file: "pdf/sci2-mar-2024-ap.pdf" }
+                ],
+
+                2023: [
+                    { name: "SCI 2 JUL 2023 QP", file: "pdf/sci2-jul-2023-qp.pdf" },
+                    { name: "SCI 2 JUL 2023 AP", file: "pdf/sci2-jul-2023-ap.pdf" },
+                    { name: "SCI 2 MAR 2023 QP", file: "pdf/sci2-mar-2023-qp.pdf" },
+                    { name: "SCI 2 MAR 2023 AP", file: "pdf/sci2-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "SCI 2 AUG 2022 QP", file: "pdf/sci2-aug-2022-qp.pdf" },
+                    { name: "SCI 2 AUG 2022 AP", file: "pdf/sci2-aug-2022-ap.pdf" },
+                    { name: "SCI 2 MAR 2022 QP", file: "pdf/sci2-mar-2022-qp.pdf" },
+                    { name: "SCI 2 MAR 2022 AP", file: "pdf/sci2-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "SCI 2 DEC 2021 QP", file: "pdf/sci2-dec-2021-qp.pdf" },
+                    { name: "SCI 2 DEC 2021 AP", file: "pdf/sci2-dec-2021-ap.pdf" },
+                    { name: "SCI 2 MAR 2021 QP", file: "pdf/sci2-mar-2021-qp.pdf" },
+                    { name: "SCI 2 MAR 2021 AP", file: "pdf/sci2-mar-2021-ap.pdf" }
+                ]
+            },
+
+            "History": {
+                2025: [
+                    { name: "HIS JUL 2025 QP", file: "pdf/his-jul-2025-qp.pdf" }
+                ],
+
+                2024: [
+                    { name: "HIS JUL 2024 QP", file: "pdf/his-jul-2024-qp.pdf" },
+                    { name: "HIS MAR 2024 AP", file: "pdf/his-mar-2024-ap.pdf" }
+                ],
+
+                2023: [
+                    { name: "HIS JULY 2023 QP", file: "pdf/his-july-2023-qp.pdf" },
+                    { name: "HIS JULY 2023 AP", file: "pdf/his-july-2023-ap.pdf" },
+                    { name: "HIS MAR 2023 QP", file: "pdf/his-mar-2023-qp.pdf" },
+                    { name: "HIS MAR 2023 AP", file: "pdf/his-mar-2023-ap.pdf" }
+                ],
+
+                2022: [
+                    { name: "HIS AUG 2022 QP", file: "pdf/his-aug-2022-qp.pdf" },
+                    { name: "HIS AUG 2022 AP", file: "pdf/his-aug-2022-ap.pdf" },
+                    { name: "HIS MAR 2022 QP", file: "pdf/his-mar-2022-qp.pdf" },
+                    { name: "HIS MAR 2022 AP", file: "pdf/his-mar-2022-ap.pdf" }
+                ],
+
+                2021: [
+                    { name: "HIS DEC 2021 QP", file: "pdf/his-dec-2021-qp.pdf" },
+                    { name: "HIS DEC 2021 AP", file: "pdf/his-dec-2021-ap.pdf" },
+                    { name: "HIS MAR 2021 QP", file: "pdf/his-mar-2021-qp.pdf" },
+                    { name: "HIS MAR 2021 AP", file: "pdf/his-mar-2021-ap.pdf" }
+                ]
+            }
+        };
+
+        function loadData(subject) {
+
+            let box = document.getElementById("paperBox");
+
+            let html = `<h1 class="title">${subject.toUpperCase()}</h1>`;
+
+            let data = papers[subject];
+
+            if (!data) {
+                box.innerHTML = "<h2>No Papers Available</h2>";
+                return;
+            }
+
+            for (let year in data) {
+                html += `
+        <div class="year">
+            <h2>${year}</h2>
+            <div class="links">
+                ${data[year].map(p => `
+                <a href="${p.file}" target="_blank" download>
+                    <i class="fa fa-download"></i> ${p.name.includes('QP') ? '📄' : '✅'} ${p.name}
+                </a>
+                `).join("")}
+            </div>
+        </div>`;
+            }
+
+            box.innerHTML = html;
+
+            document.querySelectorAll(".sidebar button").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            event.target.classList.add("active");
+        }
+
+        loadData("Algebra");
+
+    </script>
+
+
+    <script src="js/disable.js"></script>
+</body>
+
+</html>

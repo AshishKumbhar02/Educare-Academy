@@ -5,230 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Board Exam Past Papers</title>
-
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            background: linear-gradient(90deg, #1a0f5c, #283593);
-            padding: 12px 20px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        /* LOGO */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: white;
-        }
-
-        .logo img {
-            width: 45px;
-            height: 45px;
-        }
-
-        .logo-text h2 {
-            font-size: 18px;
-        }
-
-        .logo-text span {
-            font-size: 11px;
-            color: #ddd;
-            display: block;
-        }
-
-        /* NAV LINKS */
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .nav-links li a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-links li a:hover {
-            color: #ff4d4d;
-        }
-
-        /* HERO */
-        .hero-section {
-            width: 100%;
-            height: 380px;
-            background: url('images/board-bg.png') no-repeat center/cover;
-            position: relative;
-        }
-
-        .hero-section::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.25);
-        }
-
-        /* SECTION */
-        .section {
-            padding: 60px 15px;
-            background: #f4f6fc;
-            text-align: center;
-        }
-
-        .section h2 {
-            color: #1a237e;
-            margin-bottom: 30px;
-        }
-
-        /* GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        /* CARD */
-        .card {
-            padding: 25px;
-            border-radius: 12px;
-            background: #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            transition: 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-        }
-
-        /* BUTTON */
-        .btn {
-            background: linear-gradient(45deg, #ff2d2d, #ff6b6b);
-            color: #fff;
-            padding: 10px 18px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 14px;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* FOOTER */
-        .footer {
-            background: #0d1333;
-            color: #fff;
-            padding-top: 40px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        .footer-box h3 {
-            margin-bottom: 15px;
-        }
-
-        .footer-box p {
-            font-size: 14px;
-            color: #ccc;
-        }
-
-        .footer-box ul {
-            list-style: none;
-        }
-
-        .footer-box ul li a {
-            color: #ccc;
-            text-decoration: none;
-        }
-
-        .footer-box ul li a:hover {
-            color: #ff4d4d;
-        }
-
-        /* SOCIAL */
-        .social-icons a {
-            color: #fff;
-            margin-right: 10px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #ff4d4d;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 13px;
-        }
-
-        /* RESPONSIVE */
-        @media(max-width:768px) {
-            .hero-section {
-                height: 250px;
-            }
-        }
-
-        @media(max-width:480px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-            .nav-links {
-                width: 100%;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-
-            .hero-section {
-                height: 180px;
-            }
-
-            .logo img {
-                width: 40px;
-            }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="board-papers.css">
 </head>
 
 <body>
@@ -244,9 +26,9 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Papers</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Papers</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
     </div>
 
@@ -260,18 +42,38 @@
         <div class="grid">
 
             <div class="card">
-                <h3>SSC Board Exam Papers</h3>
-                <a href="#" class="btn">Download</a>
+                <img src="images/SSC Board.png" alt="SSC">
+                <div class="card-content">
+                    <a href="SSC Board.html" class="btn">Download</a>
+                </div>
             </div>
 
             <div class="card">
-                <h3>CBSE Board Exam Papers</h3>
-                <a href="#" class="btn">Download</a>
+                <img src="images/CBSE Board.png" alt="CBSE">
+                <div class="card-content">
+                    <a href="CBSE Board.html" class="btn">Download</a>
+                </div>
             </div>
 
             <div class="card">
-                <h3>ICSE Board Exam Papers</h3>
-                <a href="#" class="btn">Download</a>
+                <img src="images/ICSE Board.png" alt="ICSE">
+                <div class="card-content">
+                    <a href="ICSE Board.html" class="btn">Download</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Science Board.png" alt="Science">
+                <div class="card-content">
+                    <a href="Science Board.html" class="btn">Download</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Commerce Board.png" alt="Commerce">
+                <div class="card-content">
+                    <a href="Commerce Board.html" class="btn">Download</a>
+                </div>
             </div>
 
         </div>
@@ -319,6 +121,9 @@
         </div>
 
     </footer>
+
+
+    <script src="js/disable.js"></script>
 
 </body>
 
