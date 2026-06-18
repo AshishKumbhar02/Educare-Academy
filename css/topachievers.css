@@ -1,0 +1,292 @@
+/* SECTION */
+.achievers {
+  padding: 70px 20px;
+  text-align: center;
+  color: #e2e8f0;
+
+  background: linear-gradient(135deg, #020617, #1e3a8a, #0f172a);
+
+  position: relative;
+  overflow: hidden;
+  font-family: poppins, sans-serif;
+}
+
+/* Glow Effects */
+.achievers::before,
+.achievers::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.achievers::before {
+  width: 500px;
+  height: 500px;
+  background: rgba(59, 130, 246, 0.25);
+  top: -120px;
+  left: -120px;
+}
+
+.achievers::after {
+  width: 400px;
+  height: 400px;
+  background: rgba(250, 204, 21, 0.25);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.subtitle span {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon {
+  font-size: 28px;
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #000;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+}
+
+.header h2 {
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 800;
+  color: #facc15;
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.7);
+}
+
+/* underline */
+.underline {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  margin: 18px auto;
+  border-radius: 10px;
+}
+
+/* SLIDER */
+.slider {
+  overflow: hidden;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* fade edges */
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, #020617, transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, #020617, transparent);
+}
+
+/* TRACK */
+.track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: slide 30s linear infinite;
+  will-change: transform;
+
+  backface-visibility: hidden;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* pause on hover */
+.slider:hover .track {
+  animation-play-state: paused;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  min-width: 260px; /* thoda bada */
+  padding: 35px 22px;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7);
+  transition: 0.4s;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* shine effect */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 0.6s;
+}
+
+.card:hover::before {
+  top: 0;
+  left: 0;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:
+    0 20px 50px rgba(59, 130, 246, 0.3),
+    0 0 30px rgba(250, 204, 21, 0.3);
+}
+
+/* IMAGE */
+.card img {
+  width: 150px; /* image bigger */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #facc15;
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);
+  transition: 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* NAME */
+.card h4 {
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* MARKS */
+.marks-box {
+  margin-top: 12px;
+}
+
+.marks {
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  color: #000;
+  font-weight: 700;
+
+  padding: 10px 22px;
+  font-size: 17px;
+  border-radius: 25px;
+
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.7);
+}
+
+.label {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #facc15;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .track {
+    animation: slide 40s linear infinite;
+    gap: 16px;
+    padding: 10px;
+  }
+
+  .card {
+    min-width: 220px;
+    padding: 25px 18px;
+  }
+
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card h4 {
+    font-size: 19px;
+  }
+
+  .header h2 {
+    font-size: 26px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .card {
+    min-width: 240px;   /* card width bigger */
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .card img {
+    width: 145px;   /* 🔥 bigger image */
+    height: 145px;
+    border: 5px solid #facc15;
+    box-shadow:
+      0 0 25px rgba(250, 204, 21, 0.7),
+      0 0 45px rgba(59, 130, 246, 0.35);
+  }
+
+  .card h4 {
+    font-size: 20px;
+    margin-top: 18px;
+  }
+
+  .marks {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+}

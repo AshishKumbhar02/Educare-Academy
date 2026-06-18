@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+/* TOP BAR */
+.top-bar {
+  width: 100%;
+  height: 42px;
+
+  background: linear-gradient(90deg, #0f172a, #0d6efd, #2563eb, #0f172a);
+
+  background-size: 300% 300%;
+
+  animation: gradientMove 8s ease infinite;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* MARQUEE */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.marquee span {
+  display: inline-flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  padding-left: 100%;
+
+  letter-spacing: 0.5px;
+
+  gap: 28px; /* MAIN SPACING */
+
+  animation: marquee 22s linear infinite;
+}
+
+/* DOT DESIGN */
+.marquee .dot {
+  color: #ffd54f;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 70px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 38px; /* top-bar height */
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none !important;
+}
+
+.logo img {
+  width: 110px;
+  height: auto;
+  border-radius: 8px;
+}
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo-text h2{
+    margin:0;
+    font-size:34px;
+    font-weight:900;
+    line-height:1;
+    letter-spacing:0.5px;
+}
+
+/* BRIGHT */
+.logo-text .bright{
+    color:#0b2c6d;
+}
+
+/* MIND */
+.logo-text .mind{
+    color:#f7931e;
+}
+
+/* TAGLINE */
+.logo-text .tagline{
+    margin-top:4px;
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    color:#0b2c6d;
+    letter-spacing:0.8px;
+}
+
+.logo-text .tagline .dot{
+    color:#ff8c00;
+    margin:0 2px;
+}
+
+/* NAVIGATION */
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+
+/* hover line animation */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #0d6efd;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #0d6efd;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+}
+
+/* X Animation */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}

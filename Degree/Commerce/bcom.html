@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Com Study Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #eef3ff, #f7f9ff);
+        }
+
+        /* TOPBAR */
+        .topbar {
+            background: linear-gradient(135deg, #0b2c8c, #3b5bff);
+            color: white;
+            padding: 14px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            flex-wrap: wrap;
+
+            backdrop-filter: blur(10px);
+        }
+
+        /* LEFT SIDE */
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* LOGO */
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            padding: 8px;
+            border-radius: 16px;
+            overflow: hidden;
+            flex-shrink: 0;
+
+            /* NEW PREMIUM LOOK */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* contain ki jagah cover better look deta hai */
+            border-radius: 10px;
+        }
+
+        /* TITLE */
+        .title {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+        }
+
+        .title h1 {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+
+        .title h2 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #dbe4ff;
+        }
+
+        .title p {
+            font-size: 11px;
+            opacity: 0.85;
+        }
+
+        /* RIGHT SEARCH */
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            min-width: 220px;
+        }
+
+        .right input {
+            width: 100%;
+            max-width: 320px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        /* MAIN CARDS */
+        .card {
+            background: white;
+            padding: 28px;
+            text-align: center;
+            border-radius: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(42, 77, 255, 0.25);
+        }
+
+        /* PANEL */
+        .panel {
+            display: none;
+        }
+
+        /* YEAR CARD */
+        .year-card {
+            background: white;
+            padding: 18px;
+            border-left: 6px solid #2a4dff;
+            border-radius: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        /* SYLLABUS */
+        .syllabus {
+            background: linear-gradient(135deg, #fff7e6, #ffffff);
+            padding: 18px;
+            border-left: 6px solid #ff9800;
+            border-radius: 14px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* TEXT SIDE */
+        .syllabus .info {
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* DOWNLOAD BUTTON */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, #ff9800, #ff6a00);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 8px 18px rgba(255, 152, 0, 0.35);
+            transition: 0.3s ease;
+            white-space: nowrap;
+        }
+
+        /* HOVER EFFECT */
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(255, 106, 0, 0.45);
+        }
+
+
+        /* BOX (SEMESTER CARD) */
+        .box {
+            background: white;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 16px;
+            border-left: 6px solid #2a4dff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-4px);
+        }
+
+        .box h3 {
+            color: #2a4dff;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        /* LINKS (COMMON FOR ALL) */
+        .box a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 8px 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            background: #f5f7ff;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .box a:hover {
+            background: #2a4dff;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* BUTTON */
+        .back {
+            padding: 12px 18px;
+            background: #2a4dff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: #1d39c4;
+            transform: scale(1.05);
+        }
+
+        /* TABS */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 14px;
+            background: #e4e4e4;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .tab:hover {
+            background: #d0d0d0;
+        }
+
+        .tab.active {
+            background: #2a4dff;
+            color: white;
+            box-shadow: 0 5px 15px rgba(42, 77, 255, 0.3);
+        }
+
+        /* MOBILE */
+        @media(max-width:600px) {
+            .card {
+                padding: 22px;
+            }
+
+            .box a {
+                font-size: 13px;
+            }
+
+            .syllabus {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .topbar {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .left {
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            .right {
+                justify-content: center;
+            }
+
+            .right input {
+                max-width: 100%;
+            }
+
+            .title h1 {
+                font-size: 16px;
+            }
+
+            .title h2 {
+                font-size: 13px;
+            }
+
+            .title p {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+
+        <div class="left">
+            <div class="logo">
+                <img src="/images/University_of_Mumbai_logo.png" alt="Mumbai University Logo">
+            </div>
+
+            <div class="title">
+                <h1>University of Mumbai</h1>
+                <h2>B.Com Study Hub</h2>
+                <p>📘 Notes • 📚 Books • 📊 Previous Year Papers • 📖 Exam Preparation</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <input type="text" id="search" placeholder="🔍 Search subjects, notes, papers...">
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- HOME -->
+        <div class="grid" id="home"></div>
+
+        <!-- PANEL -->
+        <div id="panel" class="panel"></div>
+
+    </div>
+
+    <script>
+
+        /* ================= DATA ================= */
+
+        const data = {
+
+            fy: {
+                name: "📘 FYBCom",
+                syllabus: "fybcom-syllabus.pdf",
+                semesters: {
+
+                    "Semester 1": {
+                        notes: [
+                            { title: "Accountancy And Financial Management I", file: "fy/notes/fa1.pdf" },
+                            { title: "Business Communication", file: "fy/notes/bc1.pdf" },
+                            { title: "Business Economics I ", file: "fy/notes/business_economics1.pdf" },
+                            { title: "Commerce I", file: "fy/notes/comm1.pdf" },
+                            { title: "Environmental Studies I", file: "fy/notes/env_studies1.pdf" },
+                            { title: "Foundation Course", file: "fy/notes/foundation1.pdf" },
+                            { title: "Mathematical and Statistical Techniques - I", file: "fy/notes/mathe1.pdf" }
+                        ],
+                        books: [
+                            { title: "Accounting Book", file: "fy/books/accounting.pdf" },
+                            { title: "Business Law Book", file: "fy/books/business_law.pdf" },
+                            { title: "Economics Book", file: "fy/books/economics.pdf" }
+                        ],
+
+                        papers: {
+                            "2024": {
+                                "Financial Accounting - I": [
+                                    { title: "FA Paper 2024 Set A", file: "fy/papers/fa_2024_a.pdf" },
+                                    { title: "FA Paper 2024 Set B", file: "fy/papers/fa_2024_b.pdf" }
+                                ],
+                                "Business Communication": [
+                                    { title: "BC Paper 2024", file: "fy/papers/bc_2024.pdf" }
+                                ],
+                                "Business Law": [
+                                    { title: "Business Law Paper 2024", file: "fy/papers/business_law_2024.pdf" }
+                                ]
+                            },
+                            "2023": {
+                                "Financial Accounting - I": [
+                                    { title: "FA I Paper 2023", file: "fy/papers/fa_2023.pdf" }
+                                ]
+                            }
+                        }
+                    },
+
+                    "Semester 2": {
+                        notes: [
+                            { title: "Accountancy And Financial Management II", file: "fy/notes/fa2.pdf" },
+                            { title: "Business Communication II", file: "fy/notes/bc2.pdf" },
+                            { title: "Commerce II", file: "fy/notes/comm2.pdf" },
+                            { title: "Environmental Studies II", file: "fy/notes/env_studies2.pdf" },
+                            { title: "Foundation Course II", file: "fy/notes/foundation2.pdf" },
+                            { title: "Mathematical and Statistical Techniques - II", file: "fy/notes/mathe2.pdf" }
+                        ],
+                        books: [
+                            { title: "Accounting Book", file: "fy/books/accounting.pdf" },
+                            { title: "Economics Book", file: "fy/books/economics.pdf" }
+                        ],
+
+                        papers: {
+                            "2024": {
+                                "Financial Accounting - I": [
+                                    { title: "FA Paper 2024 Set A", file: "fy/papers/fa_2024_a.pdf" },
+                                    { title: "FA Paper 2024 Set B", file: "fy/papers/fa_2024_b.pdf" }
+                                ],
+                                "Business Communication": [
+                                    { title: "BC Paper 2024", file: "fy/papers/bc_2024.pdf" }
+                                ]
+                            },
+                            "2023": {
+                                "Financial Accounting - I": [
+                                    { title: "FA I Paper 2023", file: "fy/papers/fa_2023.pdf" }
+                                ]
+                            }
+                        }
+                    }
+
+                }
+            },
+
+            sy: {
+                name: "📗 SYBCom",
+                syllabus: "sybcom-syllabus.pdf",
+                semesters: {
+
+                    "Semester 3": {
+                        notes: [
+                            { title: "Accountancy & Financial Management III", file: "sy/notes/fa3.pdf" },
+                            { title: "Advertising", file: "sy/notes/advertising.pdf" },
+                            { title: "Business Law I", file: "sy/notes/business_law1.pdf" },
+                            { title: "Business Management – Marketing Management", file: "sy/notes/business_management.pdf" },
+                            { title: "Commerce Paper III", file: "sy/notes/commerce_paper3.pdf" },
+                            { title: "Company Secretarial Practice I", file: "sy/notes/companypractice1.pdf" },
+                            { title: "Elements Of Macroeconomics", file: "sy/notes/elements_of_macroeconomics.pdf" },
+                            { title: "Management Accounting", file: "sy/notes/management_accounting.pdf" }
+                        ],
+                        books: [
+                            { title: "Cost Book", file: "sy/books/cost.pdf" },
+                            { title: "Tax Book", file: "sy/books/tax.pdf" },
+                            { title: "Marketing Book", file: "sy/books/marketing.pdf" }
+                        ],
+
+                        papers: {
+                            "2024": {
+                                "Cost Accounting": [
+                                    { title: "Cost Paper 2024", file: "sy/papers/cost_2024.pdf" }
+                                ],
+                                "Income Tax": [
+                                    { title: "Tax Paper 2024", file: "sy/papers/tax_2024.pdf" }
+                                ]
+                            },
+                            "2023": {
+                                "Cost Accounting": ["Cost Paper 2023"]
+                            }
+                        }
+                    },
+
+                    "Semester 4": {
+                        notes: [
+                            { title: "Accountancy And Financial Management – IV", file: "sy/notes/fa4.pdf" },
+                            { title: "Advertising – II ", file: "sy/notes/advertising2.pdf" },
+                            { title: "Business Economics Paper IV", file: "sy/notes/business_economics4.pdf" },
+                            { title: "Business Law II", file: "sy/notes/business_law2.pdf" },
+                            { title: "Business Management – Marketing Management", file: "sy/notes/business_management4.pdf" },
+                            { title: "Commerce Paper IV", file: "sy/notes/commerce_paper4.pdf" },
+                            { title: "Company Secretarial Practices II", file: "sy/notes/company_practices2.pdf" },
+                            { title: "Financial Accounting And Auditing", file: "sy/notes/faaa4.pdf" }
+                        ],
+                        books: [
+                            { title: "Audit Book", file: "sy/books/audit.pdf" },
+                            { title: "Corporate Book", file: "sy/books/corporate.pdf" },
+                            { title: "HRM Book", file: "sy/books/hrm.pdf" }
+                        ],
+
+                        papers: {
+                            "2024": {
+                                "Auditing": [
+                                    { title: "Audit Paper 2024", file: "sy/papers/audit_2024.pdf" }
+                                ],
+                                "Corporate Accounting": [
+                                    { title: "CA Paper 2024", file: "sy/papers/ca_2024.pdf" }
+                                ]
+                            }
+                        }
+                    }
+
+                }
+            },
+
+            ty: {
+                name: "📙 TYBCom",
+                syllabus: "tybcom-syllabus.pdf",
+                semesters: {
+
+                    "Semester 5": {
+                        notes: [
+                            { title: "Business Management Paper III – Management And Organisation", file: "ty/notes/business_management3.pdf" },
+                            { title: "Business Management Paper V – Financial Management 2", file: "ty/notes/business_management5.pdf" },
+                            { title: "Commerce Paper – V Marketing", file: "ty/notes/commerce_paper5.pdf" },
+                            { title: "Direct And Indirect Taxation Paper – I", file: "ty/notes/direct5.pdf" },
+                            { title: "Economics Paper IX – Industrial And Labour Economics", file: "ty/notes/economics_paper9.pdf" },
+                            { title: "Export Marketing Paper – I", file: "ty/notes/export_marketing5.pdf" },
+                            { title: "Financial Accounting And Auditing Paper VII", file: "ty/notes/faaa7.pdf" },
+                            { title: "Financial Accounting And Auditing Paper VIII", file: "ty/notes/faaa8.pdf" },
+                            { title: "Marketing Research Paper I", file: "ty/notes/marketing_research5.pdf" }
+                        ],
+                        books: [
+                            { title: "Adv Accounting Book", file: "ty/books/adv_accounting_book.pdf" },
+                            { title: "GST Book", file: "ty/books/gst_book.pdf" },
+                            { title: "Finance Book", file: "ty/books/finance_book.pdf" }
+                        ],
+
+                        papers: {
+                            "2024": {
+                                "Advanced Accounting": [
+                                    { title: "AA Paper 2024", file: "ty/papers/aa_2024.pdf" }
+                                ],
+                                "GST": [
+                                    { title: "GST Paper 2024", file: "ty/papers/gst_2024.pdf" }
+                                ]
+                            },
+                            "2023": {
+                                "GST": [
+                                    { title: "GST Paper 2023", file: "ty/papers/gst_2023.pdf" }
+                                ]
+                            }
+                        }
+                    },
+
+                    "Semester 6": {
+                        notes: [
+                            { title: "Business Economics VI ", file: "ty/notes/business_economics6.pdf" },
+                            { title: "Commerce VI Human Resource Management", file: "ty/notes/human_resource_management6.pdf" },
+                            { title: "Direct And Indirect Taxation Paper – II ", file: "ty/notes/direct_indirect_taxation6.pdf" },
+                            { title: "Export Marketing – Paper II", file: "ty/notes/export_marketing6.pdf" },
+                            { title: "Management And Organisational Development", file: "ty/notes/management_organisational_development6.pdf" },
+                            { title: "Marketing Research Paper II", file: "ty/notes/marketing_research6.pdf" },
+                            { title: "Financial Management", file: "ty/notes/financial_management6.pdf" },
+                            { title: "PSYCHOLOGY OF HUMAN BEHAVIOR", file: "ty/notes/psychology_of_human_behavior6.pdf" }
+                        ],
+                        books: [
+                            { title: "CA Book", file: "ty/books/ca_book.pdf" },
+                            { title: "Tax Book", file: "ty/books/tax_book.pdf" },
+                            { title: "Export Book", file: "ty/books/export_book.pdf" }
+                        ],
+
+                        papers: {
+                            "2024": {
+                                "Corporate Accounting": [
+                                    { title: "CA Paper 2024", file: "ty/papers/ca_2024.pdf" }
+                                ],
+                                "Direct Tax": [
+                                    { title: "DT Paper 2024", file: "ty/papers/dt_2024.pdf" }
+                                ]
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        };
+        /* ================= HOME ================= */
+
+        const home = document.getElementById("home");
+        const panel = document.getElementById("panel");
+
+        function loadHome() {
+            home.innerHTML = "";
+            for (let key in data) {
+                home.innerHTML += `
+<div class="card" onclick="openYear('${key}')">
+${data[key].name}
+</div>`;
+            }
+        }
+        loadHome();
+
+        /* ================= OPEN YEAR ================= */
+
+        let currentData = null;
+
+        function openYear(year) {
+            currentData = data[year];
+
+            home.style.display = "none";
+            panel.style.display = "block";
+
+            renderYear(currentData);
+        }
+
+        /* ================= RENDER ================= */
+
+        function renderYear(d) {
+
+            panel.innerHTML = `
+<div class="year-card">${d.name}</div>
+
+<div class="syllabus">
+    <div class="info">📄 Syllabus File Available</div>
+
+    <a class="download-btn" href="${d.syllabus}" download>
+        ⬇ Download PDF
+    </a>
+</div>
+
+<div class="tabs">
+<div class="tab active" onclick="switchTab('notes',event)">📝 Notes</div>
+<div class="tab" onclick="switchTab('books',event)">📚 Books</div>
+<div class="tab" onclick="switchTab('papers',event)">📊 Papers</div>
+</div>
+
+<div id="content"></div>
+
+<button class="back" onclick="goHome()">⬅ Back</button>
+`;
+
+            switchTab("notes");
+        }
+
+        /* ================= TAB SYSTEM ================= */
+
+        let activeTab = "notes";
+
+        function switchTab(tab, e) {
+
+            activeTab = tab;
+
+            document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+
+            if (e) e.target.classList.add("active");
+            else event.target.classList.add("active");
+
+            let html = "";
+
+            for (let sem in currentData.semesters) {
+
+                html += `<div class="box"><h3>${sem}</h3>`;
+
+                /* NOTES + BOOKS */
+                if (tab !== "papers") {
+
+                    currentData.semesters[sem][tab].forEach(item => {
+                        if (typeof item === "string") {
+                            html += `<a href="#">${item}</a>`;
+                        } else {
+                            html += `<a href="${item.file || '#'}"${item.file ? ' download' : ''}>${item.title || item}</a>`;
+                        }
+                    });
+
+                }
+                /* PAPERS SYSTEM */
+                else {
+
+                    let papers = currentData.semesters[sem].papers;
+
+                    for (let year in papers) {
+
+                        html += `<div style="margin-top:10px;color:#ff9800;font-weight:bold">
+📅 ${year}
+</div>`;
+
+                        for (let subject in papers[year]) {
+
+                            html += `<div style="margin-left:10px;margin-top:5px">
+                                <b>📘 ${subject}</b>`;
+
+                            papers[year][subject].forEach(p => {
+                                let title = typeof p === "string" ? p : (p.title || "");
+                                let href = typeof p === "object" && p.file ? p.file : "#";
+                                html += `<a href="${href}"${href !== '#' ? ' download' : ''}>📄 ${title}</a>`;
+                            });
+
+                            html += `</div>`;
+                        }
+
+                    }
+
+                }
+
+                html += `</div>`;
+            }
+
+            document.getElementById("content").innerHTML = html;
+        }
+        /* ================= BACK ================= */
+
+        function goHome() {
+            panel.style.display = "none";
+            home.style.display = "grid";
+        }
+
+        /* ================= SEARCH ================= */
+
+        document.getElementById("search").addEventListener("input", function (e) {
+            let value = e.target.value.toLowerCase();
+            let cards = document.querySelectorAll(".box a");
+
+            cards.forEach(c => {
+                c.style.display = c.textContent.toLowerCase().includes(value) ? "block" : "none";
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

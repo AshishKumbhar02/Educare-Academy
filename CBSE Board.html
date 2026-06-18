@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBSE Board Exam Past Papers | CBSE Question Papers PDF | Educare Academy</title>
+    <!-- SEO -->
+    <meta name="description"
+        content="Download CBSE Board exam previous year question papers with solutions, important questions, sample papers, and study material in PDF format. Free CBSE board papers for Class 10 and Class 12 students at Educare Academy." />
+
+    <meta name="keywords"
+        content="CBSE board papers, CBSE question papers, class 10 CBSE papers, class 12 CBSE papers, CBSE previous year papers PDF, CBSE board exam papers with solutions, CBSE sample papers, CBSE important questions, CBSE board exam preparation, Educare Academy" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Ashish Kumbhar" />
+
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="#0d6efd" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <!-- APPLE ICON -->
+    <link rel="apple-touch-icon" href="images/logo.png" />
+
+    <!-- OPEN GRAPH (SOCIAL SHARING) -->
+    <meta property="og:title" content="CBSE Board Exam Past Papers | Educare Academy" />
+
+    <meta property="og:description"
+        content="Download CBSE Class 10 and Class 12 previous year question papers with solutions and PDFs for free." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logo.png" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="CBSE Board.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Educare Academy Logo" />
+            <div class="logo-text">
+                <h2>Educare Academy</h2>
+                <span>Be Educated, Become Successful</span>
+            </div>
+        </a>
+
+        <!-- HAMBURGER -->
+        <div class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- NAV LINKS -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="#papers"><i class="fa fa-book"></i> Papers</a>
+            <a href="#footer"><i class="fa fa-address-card"></i> About</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+
+        <!-- CBSE Board Image -->
+        <img src="images/cbse-board.png" class="hero-board-img" alt="CBSE Board Logo">
+
+        <h1>CBSE Class 10 Board Exam Papers</h1>
+
+        <p>
+            Download Previous Year Question Papers & Answer Papers
+            with Easy Access and Full PDF Support
+        </p>
+
+    </div>
+
+    <div class="container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h3>Subjects</h3>
+
+            <button onclick="loadData('English', this)" class="active">
+                <i class="fa fa-book"></i> English
+            </button>
+
+            <button onclick="loadData('Hindi', this)">
+                <i class="fa fa-language"></i> Hindi
+            </button>
+
+            <button onclick="loadData('Mathematics Basic', this)">
+                <i class="fa fa-square-root-alt"></i> Mathematics (Basic)
+            </button>
+
+            <button onclick="loadData('Mathematics Standard', this)">
+                <i class="fa fa-calculator"></i> Mathematics (Standard)
+            </button>
+
+            <button onclick="loadData('Science', this)">
+                <i class="fa fa-flask"></i> Science
+            </button>
+
+            <button onclick="loadData('Social Science', this)">
+                <i class="fa fa-globe-asia"></i> Social Science
+            </button>
+
+            <button onclick="loadData('Information Technology', this)">
+                <i class="fa fa-laptop-code"></i> Information Technology
+            </button>
+
+            <button onclick="loadData('Artificial Intelligence', this)">
+                <i class="fa fa-robot"></i> Artificial Intelligence
+            </button>
+
+            <button onclick="loadData('Sanskrit', this)">
+                <i class="fa fa-om"></i> Sanskrit
+            </button>
+
+            <button onclick="loadData('French', this)">
+                <i class="fa fa-language"></i> French
+            </button>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content" id="papers">
+            <div class="paper-box" id="paperBox"></div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Educare Academy Logo">
+                </div>
+
+                <h2>Educare Academy</h2>
+
+                <p>
+                    CBSE Board Class 10 & Class 12 विद्यार्थियों के लिए
+                    Previous Year Question Papers, Sample Papers,
+                    PDF Notes, Important Questions और Study Material
+                    एक ही जगह उपलब्ध।
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="#papers">
+                    <i class="fa-solid fa-book-open"></i>
+                    Papers
+                </a>
+
+                <a href="#footer">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About Us
+                </a>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+
+                <a href="mailto:educareacademy@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    educareacademy@gmail.com
+                </a>
+
+                <a href="tel:+917303418968">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 7303418968
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dahisar East, Mumbai
+                </a>
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/prajapati_ashish_21?utm_source=qr&igsh=MWJlMmxheTUxdzZxcg==">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>
+                © 2026 Educare Academy | All Rights Reserved
+            </p>
+
+            <p>
+                Designed for CBSE Board Students
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const papers = {
+            "English": generateSubjectData("english"),
+            "Hindi": generateSubjectData("hindi"),
+            "Mathematics Basic": generateSubjectData("maths-basic"),
+            "Mathematics Standard": generateSubjectData("maths-standard"),
+            "Science": generateSubjectData("science"),
+            "Social Science": generateSubjectData("social-science"),
+            "Information Technology": generateSubjectData("information-technology"),
+            "Artificial Intelligence": generateSubjectData("artificial-intelligence"),
+            "Sanskrit": generateSubjectData("sanskrit"),
+            "French": generateSubjectData("french")
+        };
+
+        function generateSubjectData(subjectSlug) {
+            const years = [2026, 2025, 2024, 2023, 2022];
+            const data = {};
+
+            years.forEach(year => {
+                data[year] = {
+                    zip: `zip/${subjectSlug}-${year}-cbse-class-10-question-papers.zip`
+                };
+            });
+
+            return data;
+        }
+
+        // YEAR TOGGLE FUNCTION (IMPORTANT)
+        function toggleYear(el) {
+            const content = el.nextElementSibling;
+            content.classList.toggle("open");
+
+            // arrow rotate
+            el.classList.toggle("active");
+        }
+
+        // LOAD DATA
+        function loadData(subject, element = null) {
+            const box = document.getElementById("paperBox");
+
+            let html = `<h1 class="title">${subject}</h1>`;
+            const data = papers[subject];
+
+            if (!data) {
+                box.innerHTML = `<h2 class="no-data">No Papers Available</h2>`;
+                return;
+            }
+
+            const years = Object.keys(data).sort((a, b) => b - a);
+
+            years.forEach((year, index) => {
+                html += `
+        <div class="year">
+
+            <h2 onclick="toggleYear(this)">
+                <i class="fa fa-calendar-alt"></i> ${year}
+                <span class="arrow">▼</span>
+            </h2>
+
+           <div class="year-content">
+                <a class="zip-btn" href="${data[year].zip}" download>
+                    <i class="fa fa-file-archive"></i>
+                    Download ZIP (${year})
+                </a>
+            </div>
+
+        </div>
+        `;
+            });
+
+            box.innerHTML = html;
+
+            // ACTIVE BUTTON HANDLING
+            document.querySelectorAll(".sidebar button").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            if (element) element.classList.add("active");
+        }
+
+        // AUTO LOAD ENGLISH
+        window.onload = () => {
+            const firstBtn = document.querySelector(".sidebar button");
+            loadData("English", firstBtn);
+        };
+    </script>
+
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            navLinks.classList.toggle("active");
+
+            const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", !expanded);
+        });
+
+        // close on click
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", () => {
+                menuToggle.classList.remove("active");
+                navLinks.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", false);
+            });
+        });
+    </script>
+
+    <script src="js/disable.js"></script>
+</body>
+
+</html>

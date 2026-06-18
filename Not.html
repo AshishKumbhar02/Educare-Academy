@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Updating</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+            position: relative;
+        }
+
+        /* Animated Background */
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(56, 189, 248, 0.12);
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .circle:nth-child(1) {
+            width: 250px;
+            height: 250px;
+            top: -80px;
+            left: -80px;
+        }
+
+        .circle:nth-child(2) {
+            width: 180px;
+            height: 180px;
+            bottom: 50px;
+            right: -60px;
+            animation-delay: 2s;
+        }
+
+        .circle:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            left: 10%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            text-align: center;
+            padding: 50px 35px;
+            color: white;
+
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+
+            border-radius: 30px;
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, .4),
+                inset 0 0 20px rgba(255, 255, 255, .05);
+
+            animation: fadeIn 1s ease;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 70px;
+            margin-bottom: 20px;
+            animation: rotate 5s linear infinite;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 46px);
+            margin-bottom: 15px;
+            color: #38bdf8;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: clamp(15px, 3vw, 18px);
+            color: #d1d5db;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .loader {
+            width: 100%;
+            height: 12px;
+            border-radius: 50px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .loader span {
+            display: block;
+            width: 35%;
+            height: 100%;
+            border-radius: 50px;
+            background: linear-gradient(90deg,
+                    #06b6d4,
+                    #38bdf8,
+                    #60a5fa);
+            animation: loading 2s infinite;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(90deg, #06b6d4, #2563eb);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, .4);
+        }
+
+        .status {
+            margin-top: 20px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .dots::after {
+            content: "";
+            animation: dots 2s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(320%);
+            }
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes dots {
+            0% {
+                content: "";
+            }
+
+            25% {
+                content: ".";
+            }
+
+            50% {
+                content: "..";
+            }
+
+            75% {
+                content: "...";
+            }
+
+            100% {
+                content: "";
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 20px;
+                border-radius: 20px;
+            }
+
+            .logo {
+                font-size: 55px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="container">
+
+        <div class="logo">⚙️</div>
+
+        <h1>Website Updating<span class="dots"></span></h1>
+
+        <p>
+            We are improving our website to provide a faster, smoother
+            and better experience for our visitors.
+            We'll be back online very soon.
+        </p>
+
+        <div class="loader">
+            <span></span>
+        </div>
+
+        <a href="https://wa.me/917303418968?text=Hello%20I%20visited%20your%20website" class="btn">
+            Contact on WhatsApp
+        </a>
+
+        <div class="status">
+            Thank you for your patience ❤️
+        </div>
+
+    </div>
+
+    <script src="js/disable.js"></script>
+</body>
+
+</html>
