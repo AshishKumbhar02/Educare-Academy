@@ -1,0 +1,30 @@
+Lekin online platform ke liye main ye structure recommend karunga:
+
+Public Website
+
+🏠 Home
+ℹ️ About
+📚 Courses
+🎥 Online Classes
+📖 Study Material
+👨‍🏫 Faculty
+🏆 Results
+🖼️ Gallery
+❓ FAQ
+📞 Contact
+
+Student Account
+
+🔐 Login
+📝 Sign Up
+👤 Student Dashboard
+🎥 My Classes
+📚 My Courses
+📄 Notes / Study Material
+📝 Tests / Exams
+📊 Results
+💳 Fees / Payments
+📅 Class Schedule
+🔔 Notifications
+👤 Profile
+🚪 Logout

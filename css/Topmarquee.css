@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 125px;
+}
+
+/* TOP BAR */
+.top-bar {
+  width: 100%;
+  height: 42px;
+  background: linear-gradient(90deg, #0f172a, #0d6efd, #2563eb, #0f172a);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* MARQUEE */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.marquee span {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 100%;
+  letter-spacing: 0.5px;
+  gap: 20px;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee span strong {
+  color: #ffd54f;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px rgba(255, 213, 79, 0.7),
+    0 0 12px rgba(255, 193, 7, 0.45);
+  position: relative;
+  display: inline-block;
+  animation: ramhitColor 3s ease-in-out infinite;
+}
+@keyframes ramhitColor {
+  0% {
+    color: #ffd54f;
+    text-shadow: 0 0 5px rgba(255, 213, 79, 0.6);
+  }
+  25% {
+    color: #ff9f43;
+    text-shadow: 0 0 10px rgba(255, 159, 67, 0.7);
+  }
+  50% {
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+  }
+  75% {
+    color: #a7ff83;
+    text-shadow: 0 0 10px rgba(167, 255, 131, 0.7);
+  }
+  100% {
+    color: #ffd54f;
+    text-shadow: 0 0 5px rgba(255, 213, 79, 0.6);
+  }
+}
+
+/* DOT DESIGN */
+.marquee .dot {
+  color: #ffd54f;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

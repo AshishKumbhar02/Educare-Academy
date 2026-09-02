@@ -34,25 +34,25 @@ faqItems.forEach((item) => {
   });
 });
 
-const festivalImg = document.getElementById("festivalImg");
-const popup = document.getElementById("imagePopup");
-const popupImg = document.getElementById("popupImg");
-const closePopup = document.querySelector(".close-popup");
+// const festivalImg = document.getElementById("festivalImg");
+// const popup = document.getElementById("imagePopup");
+// const popupImg = document.getElementById("popupImg");
+// const closePopup = document.querySelector(".close-popup");
 
-// OPEN
-festivalImg.addEventListener("click", () => {
-  popup.style.display = "flex";
-  popupImg.src = festivalImg.src;
-});
+// // OPEN
+// festivalImg.addEventListener("click", () => {
+//   popup.style.display = "flex";
+//   popupImg.src = festivalImg.src;
+// });
 
-// CLOSE BUTTON
-closePopup.addEventListener("click", () => {
-  popup.style.display = "none";
-});
+// // CLOSE BUTTON
+// closePopup.addEventListener("click", () => {
+//   popup.style.display = "none";
+// });
 
-// CLICK OUTSIDE CLOSE
-popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
-    popup.style.display = "none";
-  }
-});
+// // CLICK OUTSIDE CLOSE
+// popup.addEventListener("click", (e) => {
+//   if (e.target === popup) {
+//     popup.style.display = "none";
+//   }
+// });
